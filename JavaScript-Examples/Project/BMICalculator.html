@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .calculater{
+            border: 10px solid rgb(95, 95, 122);
+            border-radius: 10px;  
+        }
+        span{
+            color: rgb(194, 198, 202);
+        }
+        #lblResult{
+            height: 40px;
+            width: 120px;
+            background-color:  rgb(194, 198, 202);
+            border-radius: 10px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-size: 18px;
+        }
+        .bmi-container{
+            display: flex;
+            justify-content: space-around;
+        }  
+    </style>
+    
+    <script>
+        function CalculateClick(){
+            let height = document.getElementById("txtHeight").value;
+            let weight= document.getElementById("txtWeight").value;
+
+            let BMI = weight/(Math.pow(height,2))*10000;
+
+            document.getElementById("lblResult").innerHTML = `<b>${BMI.toFixed(2)}</b>`;
+
+            if(BMI>18.5){
+                document.getElementById("lblMessage").innerHTML= '<h4 class="text-danger"> Your are Underweight</h4>';
+            }
+            else if(BMI>=18.5 && BMI<=24.9){
+                document.getElementById("lblMessage").innerHTML='<h4 class="text-success"> Your are Normal</4>'
+            }
+            else if(BMI>=25&& BMI<=29.9){
+                document.getElementById("lblMessage").innerHTML='<h4 class="text-warning"> Your are OverWeight</4>'
+            }
+            else{
+                document.getElementById("lblMessage").innerHTML='<h4 class="text-danger"> Your are Obese</4>'
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid bg-dark d-flex justify-content-center mt-5">
+    <div class="calculater w-50 p-4  ">
+        <div class=" text-white ">
+            <div class="h4  text-center mb-4 ">BMI Calculator</div>
+        </div>
+        <div class="text-white  bmi-container">
+            <div class="">
+                <div class="d-flex">
+                    <span class="me-5">Gender</span>
+                    <div>
+                        <input type="radio" name="gender"><label>Male</label>
+                        <input type="radio" name="gender"><Label>Female</Label>
+                    </div>
+                </div>
+                <div class="d-flex my-3">
+                    <span class="me-5">Age</span>
+                    <input type="text" class="bg-secondary ms-4 text-white"  size="10">
+                </div>
+                <div class="d-flex">
+                    <span>Height in cm</span>
+                    <input type="text" class="bg-secondary text-white ms-2" id="txtHeight" size="10">
+                </div>
+                <div class="d-flex my-3">
+                    <span class="me-5">Weight</span>
+                    <input type="text" class="bg-secondary text-white " id="txtWeight" placeholder="" size="10">
+                </div>
+               
+            </div>
+
+            <div>
+                <div>
+                    YOUR BMI IS
+                    <div id="lblResult"  class="mt-2">
+
+                    </div>
+                </div>
+                <div id="lblMessage" class="mt-2">
+
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary" onclick="CalculateClick()" >Calculate</button>
+        </div>
+    </div>
+</body>
+</html>
