@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zomato2</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="zomato2.css" />
+  </head>
+  <body class="container-fluid p-0 m-0">
+    <!-- ***********     Header Section  ************** -->
+    <header>
+      <nav class="navbar navbar-expand-lg d-flex justify-content-between">
+        <div class="container-fluid">
+        <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <div class="navbar-brand"><h2>Zamoat</h2></div> -->
+        <div class="detail">
+          <a href="#"><span class="bi bi-phone"></span>Get the App</a>
+        </div>
+        <div class="somedetail">
+          <a href="#">Explore</a>
+          <a href="#">Restaurants</a>
+          <a href="#login" data-bs-toggle="modal">Log in</a>
+          <a href="#sign" data-bs-toggle="modal">Sign up</a>
+        </div>
+        </div>
+      </nav>
+
+      <!-- ************ Dialog Box Using Modal Bootstraps*********** -->
+      <div class="modal fade" id="sign">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Sign Up</h3>
+              <button data-bs-dismiss="modal" class="btn btn-close"></button>
+            </div>
+            <div class="modal-body me-4">
+              <input type="text" class="form-control " placeholder="Full Name">
+              <input type="emil" class="form-control mt-4 " placeholder="Email">
+              <input type="checkbox" class="me-1">I agree to Zomato's <span class="text-danger">Terms of Service <span class="text-secondary">,</span>Pravacy Policy <span class="text-secondary">and </span>Content Policies</span>
+              <br>
+              <button class="btn btn-light w-100">Create Account</button>
+              <span class="text-center">or</span>
+              <button class="btn btn-light w-100 p-1 mt-3"><img class="googleImage" src="./public/images/g.png"  width="32px" class="fs-normal"> Sign in with Google</button>
+              <h4>Already have an account?<span class="text-danger">Log in</span></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- **** Dialog Box for Login ****** -->
+      <div class="modal fade" id="login">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Login</h3>
+              <button data-bs-dismiss="modal" class="btn btn-close"></button>
+            </div>
+            <div class="modal-body">
+              <input type="text" class="form-control">
+              <button class="btn btn-danger text-center w-100">Send One time Password</button>
+              <button class="btn btn-light w-100 p-1 mt-3"><img class="googleImage" src="./public/images/g.png"  width="32px" class="fs-normal"> Sign in with Google</button> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="zomatoLogo">
+        <img src="./public/images/zomatoimg.png" alt="" />
+      </div>
+      <div class="dis">Discover the food & drinks in Hyderabad</div>
+
+      <div class="location">
+        <span class="bi bi-geo-alt-fill"
+          ><input type="text" placeholder="Location"
+        /></span>
+
+        <span>|</span>
+
+        <span class="bi bi-search"
+          ><input type="text" placeholder="Search Here"
+        /></span>
+      </div>
+    </header>
+
+    <main>
+      <!-- *******     Section1    ********* -->
+      <section class="section1">
+        <!-- <div class="firstcard">
+                    <div class="card">
+                        
+                        
+                    </div> 
+                    <div class="card">
+                        <img src="./public/images/pizza.png" alt="">
+                       
+                    </div>
+                    <div class="card">
+                        <img src="./public/images/biryani.png" alt="">
+                        
+                </div> -->
+        <div class="card1">
+          <div class="dishcard">
+            <img src="./public/images/dish.jpg" alt="" />
+            <div class="title">
+              <span class="suggest">Order Online</span>
+              <span class="suggest-dis"
+                >Stay home and order to your doorstep</span
+              >
+            </div>
+          </div>
+          <div class="dishcard">
+            <img class="img2" src="./public/images/pizza.png" alt="" />
+            <div class="title">
+              <span class="suggest">Dining</span>
+              <span class="suggest-dis"
+                >view the city's favourite dining venues</span
+              >
+            </div>
+          </div>
+          <div class="dishcard">
+            <img class="img3" src="./public/images/biryani.png" alt="" />
+            <div class="title">
+              <span class="suggest">Live Events</span>
+              <span class="suggest-dis"
+                >Discover the india's best events & concerts</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ******      Section2      ******** -->
+      <section class="section2">
+        <div class="collection">Collection</div>
+        <div class="paragraph">
+          <span class="grey"
+            >Explore curated lists of top restaurants, cafes, pubs, and bars in
+            Hyderabad, based on trends
+          </span>
+          <span class="red"
+            >All Collections in Hyderabad
+            <span class="bi bi-caret-right-fill"></span
+          ></span>
+        </div>
+
+        <div class="card2">
+          <div class="childcard1 child">
+            <div class="text">
+              <span>Top trending spots</span>
+              <span>32 places <span class="bi-caret-right-fill"></span></span>
+            </div>
+          </div>
+          <div class="childcard2 child">
+            <div class="text">
+              <span>Top trending spots</span>
+              <span>32 places <span class="bi-caret-right-fill"></span></span>
+            </div>
+          </div>
+          <div class="childcard3 child">
+            <div class="text">
+              <span>Top trending spots</span>
+              <span>32 places <span class="bi-caret-right-fill"></span></span>
+            </div>
+          </div>
+          <div class="childcard4 child">
+            <div class="text">
+              <span>Top trending spots</span>
+              <span>32 places <span class="bi-caret-right-fill"></span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ******      Section      ******** -->
+      <section class="section3">
+        <div class="hyderabad">
+          Popular localities in and around <b>Hyderabad</b>
+        </div>
+        <div class="alllocation">
+          <div class="locationlist">
+            <div class="locationname">
+              <h4>Jublilee Hills</h4>
+              <span>428 places</span>
+            </div>
+            <span class="bi bi-chevron-right"></span>
+          </div>
+          <div class="locationlist">
+            <div class="locationname">
+              <h4>Gachibowli</h4>
+              <span>832 places</span>
+            </div>
+            <span class="bi bi-chevron-right"></span>
+          </div>
+          <div class="locationlist">
+            <div class="locationname">
+              <h4>Banjara Hills</h4>
+              <span>428 places</span>
+            </div>
+            <span class="bi bi-chevron-right"></span>
+          </div>
+          <div class="locationlist">
+            <div class="locationname">
+              <h4>Hitech City</h4>
+              <span>405 places</span>
+            </div>
+            <span class="bi bi-chevron-right"></span>
+          </div>
+          <div class="locationlist">
+            <div class="locationname">
+              <h4>Madhapur</h4>
+              <span>895 places</span>
+            </div>
+            <span class="bi bi-chevron-right"></span>
+          </div>
+          <div class="locationlist">
+            <div class="locationname">
+              <h4>Kondapur</h4>
+              <span>428 places</span>
+            </div>
+            <span class="bi bi-chevron-right"></span>
+          </div>
+          <div class="locationlist">
+            <div class="locationname">
+              <h4>Kukatpally</h4>
+              <span>1520 places</span>
+            </div>
+            <span class="bi bi-chevron-right"></span>
+          </div>
+          <div class="locationlist">
+            <div class="locationname">
+              <h4>Begumpet</h4>
+              <span>162 places</span>
+            </div>
+            <span class="bi bi-chevron-right"></span>
+          </div>
+          <div class="locationlist">
+            <div class="locationname">
+              <h4>see more</h4>
+            </div>
+            <span class="bi bi-chevron-down"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ********   Section4    ********** -->
+      <section class="section4">
+        <div class="mobile">
+          <img src="./public/images/mobile.png" alt="" />
+        </div>
+        <div class="contact">
+          <div class="contact-heading">
+            <h1>Get the Zomato App</h1>
+          </div>
+          <p class="dwnld">
+            We will send you a link, open it on your phone to download <br />the
+            app
+          </p>
+
+          <div class="radiobtn">
+            <input type="radio" id="email" name="fav_language" />
+            <label for="email">Email</label>
+            <input type="radio" id="phone" name="fav_language" />
+            <label for="phone">Phone</label>            
+          </div>
+          <div class="textbtn">
+            <input type="text" placeholder="Email" />
+            <button>Share</button>
+          </div>
+          <p>Download app from</p>
+          <div class="dwnldapp">
+            <img src="./public/images/playstore.png" alt="" />
+            <img src="./public/images/appstore.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ******  Section5    ******* -->
+      <section class="section5">
+        <div class="h-title">Explore options near me</div>
+        <div class="explore">
+          <span data-bs-toggle="collapse" data-bs-target="#q1">Popular Cuisines Near Me</span>
+          <span class="bi bi-chevron-down"></span>
+          <div class="collapse" id="q1">
+            <a>Bakery near me <span>.</span></a> 
+          </div>
+        </div>
+        <div class="explore">
+          <span>Popular Restaurant Types Near me</span>
+          <span class="bi bi-chevron-down"></span>
+        </div>
+        <div class="explore">
+          <span>Top Restaurant Chains</span>
+          <span class="bi bi-chevron-down"></span>
+        </div>
+        <div class="explore">
+          <span>Cities We Deliver To</span>
+          <span class="bi bi-chevron-down"></span>
+        </div>
+      </section>
+    </main>
+
+    <!-- *******     footer      ******* -->
+    <footer>
+      <div class="footer">
+        <div class="row">
+          <div class="logo">
+            <img src="./public/images/zomatologo.png" alt="" />
+          </div>
+          <div class="footer-location">
+            <div class="country">
+              <select id="option">
+                <option><img src="./public/images/indflag.png" alt=""> <span>India</span></option>
+                <option> <img src="./public/images/uaeflag.png" alt=""><span>UAE</span></option>
+              </select>
+            </div>
+            <div class="language">
+              <select name="" id="option">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="zh">Chinese</option>
+                <option value="zh">Indonesian</option>
+                <option value="zh">Polish</option>
+                <option value="zh">Italian</option>
+                <option value="zh">Veitnamemese</option>
+                <option value="zh">Slovenčina</option>
+                <option value="zh">Português (PT)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="information">
+          <div class="information-child">
+            <a href="#" id="h-link">About Zomato</a>
+            <a href="#">Who We Are</a>
+            <a href="#">Blog</a>
+            <a href="#">Work With Us</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Reportar uma Fraude</a>
+            <a href="#">Press Kit</a>
+            <a href="#">Contact Us</a>
+          </div>
+          <div class="information-child">
+            <a href="#" id="h-link">ZOMAVERSE</a>
+            <a href="#">Zomato</a>
+            <a href="#">Blinkit</a>
+            <a href="#">District</a>
+            <a href="#">Feeding India</a>
+            <a href="#">Zomato Live</a>
+            <a href="#">Zomaland</a>
+            <a href="#">Weather Union</a>
+          </div>
+          <div class="information-child">
+            <a href="#" id="h-link">PARA RESTAURANTES</a>
+            <a href="#">Partner With Us</a>
+            <a href="#">Apps For You</a>
+          </div>
+          <div class="information-child">
+            <a href="#" id="h-link">LEARN MORE</a>
+            <a href="#">Prevacidade</a>
+            <a href="#">Seguranca</a>
+            <a href="#">Termos</a>
+          </div>
+          <div class="information-child">
+            <a href="#" id="h-link">SOCIAL</a>
+            <div class="socialmedia">
+                <a href="#"><span class="bi bi-linkedin"></span></a>
+                <a href="#"><span class="bi bi-instagram"></span></a>
+                <a href="#"><span class="bi bi-twitter"></span></a>
+                <a href="#"><span class="bi bi-youtube"></span></a>
+                <a href="#"><span class="bi bi-facebook"></span></a>
+            </div>
+            <div class="dwnldapp2">
+                <img src="./public/images/playstore.png" alt="" />
+                <img id="appstore" src="./public/images/appstore.png" alt="" />
+            </div>
+          </div>
+        
+        </div>
+        <hr>
+        <p class="copyright">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Zomato™ Ltd. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
