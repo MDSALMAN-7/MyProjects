@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Mobile</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        let tip ="";
+        let regExp = / /;
+
+        function CountryChange(){
+            let country = document.getElementById("lstCountries").value;
+            let mobileTexBox = document.getElementById("txtMobile");
+            var imgFlag = document.getElementById("imgFlag");
+
+            if(country == "India"){
+                tip = "eg: +91 and 10 Digits";
+                mobileTexBox.placeholder = tip;
+                regExp = /\+91\s\d{10}/;
+                imgFlag.src = "../../public/images/india.png"
+            }
+            else if(country == "UK"){
+                tip = "eg: +(44)(20) 1234 5678";
+                mobileTexBox.placeholder = tip;
+                regExp = /\+\(44\)\(\d{2}\)\s\d{4}\s\d{4}/;
+                imgFlag.src = "../../public/images/uk.png";
+            }
+            else if( country == "US"){
+                tip = "eg: +(1)(425) 55-0100";
+                mobileTexBox.Placeholder = tip;
+                regExp = regExp = /\+\(1\)\(\d{3}\)\s\d{3}-\d{4}/;
+                imgFlag.src = "../../public/images/us.png";
+            }
+            else if(country == "UAE"){
+                tip = "eg: +971-40-1234567";
+                mobileTexBox.placeholder=tip;
+                regExp = /\+971-\d{2}-\d{7}/;
+                imgFlag.src="../../public/images/uae.png"
+            }
+            else if(country == "Turkey"){
+                tip = "eg: +90 123 4567";
+                mobileTexBox.placeholder = tip;
+                regExp = /\+90\s\d{3}\s\d{4}/;
+                imgFlag.src="../../public/images/turkey.png";
+            }
+            else if(country == "Saudi Arbia"){
+                tip = "eg: +966 123 456 7890";
+                mobileTexBox.placeholder = tip;
+                regExp = /\+966\s\d{3}\s\d{3}\s\d{4}/;
+                imgFlag.src = "../../public/images/saudi.png";
+            }
+
+        }
+
+        function VerifyMobile(){
+            let mobile = document.getElementById("txtMobile").value;
+            let lblMobile = document.getElementById("lblMobile");
+
+            if(mobile.match(regExp)){
+                lblMobile.innerHTML = "Mobile Verifed".fontcolor("green");
+            }
+            else{
+                lblMobile.innerHTML = `Invalid Moblie : ${tip}`.fontcolor("red");
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <div class="mt-4 ms-4 w-25"> 
+        <h3>Your Mobile Verification</h3>
+        <dl>
+            <dt>Select Your Country</dt>
+            <dd class="input-group">
+                <select class="form-control" id="lstCountries" onchange="CountryChange()">
+                    <option>Select Country</option>
+                    <option>India</option>
+                    <option>UK</option>
+                    <option>US</option>
+                    <option>UAE</option>
+                    <option>Turkey</option>
+                    <option>Saudi Arbia</option>
+                </select>
+                <img id="imgFlag" class="input-group-text" width="50">
+            </dd>
+            <dt>Mobile Number</dt>
+            <dd><input type="text" class="form-control" id="txtMobile"></dd>
+            <dd id="lblMobile"></dd>
+            <dd >
+                <button class="btn btn-warning w-100" onclick="VerifyMobile()">Verify Mobile</button>
+            </dd>
+        </dl>
+    </div>
+</body>
+</html>
