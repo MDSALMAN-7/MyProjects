@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <script>
+        let movies = ["CHAAVA","CAPTAIN AMERICA","BHAIJAAN"];
+
+        function LoadMovies(){
+            document.getElementById("lstMovies").innerHTML="";
+            movies.map(function(movie){
+                let option = document.createElement("option");
+                option.text = movie.toUpperCase();
+                option.value = movie.toUpperCase();
+                document.getElementById("lstMovies").appendChild(option);
+            });
+            document.getElementById("lblCount").innerHTML = `Total count of Movies:${movies.length}`;
+        }
+
+        function AddClick(){
+            let movieName = document.getElementById("txtMovie").value;
+
+            if(movieName.length === 0){
+                alert('Please enter movie name');
+            }
+            else{
+                let movieIndex = movies.indexOf(movieName);
+                if(movieIndex === -1){
+                    movies.push(movieName);
+                    alert(`${movieName.toUpperCase()} Add to List`);
+                    LoadMovies();
+                    document.getElementById("txtMovie").value = "";
+                }
+                else{
+                    alert(`${movieName.toUpperCase()} Exists`);
+                }
+            }
+        }
+
+        function SortAsec(){
+            movies.sort();
+            LoadMovies();
+        }
+        function SortDsec(){
+            movies.sort().reverse();
+            LoadMovies();
+        }
+
+        function ClearAll(){
+            movies.length = 0;
+            LoadMovies();
+        }
+
+        function RemoveClick(){
+            let selectedMovieName = document.getElementById("lstMovies");
+            let selectMovieIndex = movies.indexOf(selectedMovieName);
+            let confirmBox = confirm(`Are you sure?\nWhat to Delete ?\n${selectedMovieName}`);
+
+            if(confirmBox === true){
+                movies.splice(selectMovieIndex,1);
+                LoadMovies();
+            }
+
+            // let selectedMovieName = document.getElementById("lstMovies").value;
+            // let selectedMovieIndex = movies.indexOf(selectedMovieName);
+
+            // document.getElementById("txtEditMovie").value = selectedMovieName;
+        }
+
+        function EditClick(){
+            var selectedMovieName = document.getElementById("lstMovies").value;
+            var selectMovieIndex = movies.indexOf(selectedMovieName);
+
+            document.getElementById("txtEditMovie").value = selectedMovieName;
+        }
+        function SaveClick(){
+            var selectedMovieName = document.getElementById("lstMovies").value;
+            var selectMovieIndex = movies.indexOf(selectedMovieName);
+
+            var newMovieName = document.getElementById("txtEditMovie").value;
+            movies[selectMovieIndex] = newMovieName;
+            LoadMovies();
+        }
+
+        let chars = ["ala","udfjk","yasdfsd","lasdf","nasdf"];
+        chars.sort();
+        console.log(chars);
+    </script>
+</head>
+<body class="container-fluid" onload="LoadMovies()" >
+    <h3> <span class="bi bi-film"></span>BookMyShow-Admin Dashboard</h3> 
+    <div class="w-50 mt-4">
+        <div class="input-group">
+            <input type="text" placeholder="New Movie Name" id="txtMovie" class="form-control">
+            <button class="btn btn-primary" onclick="AddClick()">Add</button>
+        </div>
+        <div class="my-3">
+            <label class="form-label fw-bold">Movies List</label>
+            <div class="my-2">
+                <button class="bi bi-sort-alpha-down btn btn-success ms-2" onclick = "SortDsec()"></button>
+                <button class="bi bi-sort-alpha-up btn btn-warning ms-2" onclick = "SortAsec()"></button>
+            </div>
+            <div>
+                <select class="form-select" size="3" multiple id="lstMovies"></select>
+                <label id="lblCount" class="form-label fw-bold"></label>
+            </div>
+        </div>
+        <div class="my-2">
+            <div class="btn-group">
+                <button class="bi bi-pen-fill btn btn-warning" data-bs-target="#edit" data-bs-toggle="modal" onclick="EditClick()">Edit Movie</button>
+                <div class="modal fade" id="edit">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <input type="text" id="txtEditMovie">
+                            </div>
+                            <div class="modal-body">
+                                <input type="text" id="txtEditMovie" class="form-control">
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success" data-bs-dismiss="modal" onclick="SaveClick()">Save</button>
+                                <button data-bs-dismiss="modal" class="btn btn-warning ms-2">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-danger bi bi-trash-fill" onclick="RemoveClick()" >Remove Movie</button>
+                <button onclick="ClearAll()" class="btn btn-outline-danger">Clear All</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
