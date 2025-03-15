@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript">
+        function SubmitClick(){
+            document.getElementById("lblName").innerHTML=document.getElementById("txtName").value;
+            document.getElementById("lblDOB").innerHTML=document.getElementById("txtDob").value;
+            document.getElementById("lblEmail").innerHTML=document.getElementById("txtEmail").value;
+            document.getElementById("lblMob").innerHTML=document.getElementById("txtMob").value;
+            document.getElementById("lblGender").innerHTML=document.getElementById("txtGender").value;
+            document.getElementById("lblOccupation").innerHTML=document.getElementById("txtOccupation").value;
+            document.getElementById("lblIdType").innerHTML=document.getElementById("txtIdType").value;
+            document.getElementById("lblIdNumber").innerHTML=document.getElementById("txtIdNumber").value;
+            document.getElementById("lblIssueAuth").innerHTML=document.getElementById("txtIssueAuth").value;
+            document.getElementById("lblIssueDate").innerHTML=document.getElementById("txtIssueDate").value;
+            document.getElementById("lblIssueState").innerHTML=document.getElementById("txtIssueState").value;
+            document.getElementById("lblExpiryDate").innerHTML=document.getElementById("txtExpiryDate").value;
+        }
+
+        function SubmitForm(){
+            alert("Submit successfully..");
+        }
+
+        function ModifyData(){
+            document.getElementById("lblHeading").innerHTML="Edit ";
+            document.getElementById("btnSubmit").innerHTML="Save";
+        }
+    </script>
+</head>
+<body class="container-fluid bg-primary d-flex justify-content-center mt-5">
+    <div class="rounded bg-white p-2 w-50">
+        <h3 id="lblHeading">Registration</h3>
+        <div>
+            <h5 class="text-secondary">Personal Details</h5>
+            <div class="d-flex justify-content-around">
+            <dl>
+                <dt>Full Name</dt>
+                <dd><input type="text" placeholder="Enter your name" id="txtName" class="form-control"></dd>
+                <dt>Mobile Number</dt>
+                <dd><input type="tel" placeholder="Enter mobile number" id="txtMob" class="form-control"></dd>
+            </dl>
+            <dl>
+                <dt>Date of Birth</dt>
+                <dd><input type="date" placeholder="Enter birth date" id="txtDob" class="form-control"></dd>
+                <dt>Gender</dt>
+                <dd><input type="text" placeholder="Enter you gender" id="txtGender" class="form-control"></dd>
+            </dl>
+            <dl>
+                <dt>Email</dt>
+                <dd><input type="text" placeholder="Enter you Email" id="txtEmail" class="form-control" required></dd>
+                <dt>Occupation</dt>
+                <dd><input type="text" placeholder="Enter occupation" id="txtOccupation" class="form-control" required></dd>
+            </dl>
+            </div>
+        </div>
+        <div>
+            <h5 class="text-secondary">Identify Details</h5>
+            <div class="d-flex justify-content-around">
+                <dl>
+                    <dt>ID Type</dt>
+                    <dd><input type="text" placeholder="Enter ID type" id="txtIdType" class="form-control" required></dd>
+                    <dt>Issue Date</dt>
+                    <dd><input type="date" placeholder="Enter Id Type" id="txtIssueDate" class="form-control" required></dd>
+                </dl>
+                <dl>
+                    <dt>ID Number</dt>
+                    <dd><input type="text" placeholder="Enter ID number" id="txtIdNumber" class="form-control" required></dd>
+                    <dt>Issue State</dt>
+                    <dd><input type="text" placeholder="Enter Id issue State" id="txtIssueState" class="form-control" required></dd>
+                </dl>
+                <dl>
+                    <dt>Issue Authority</dt>
+                    <dd><input type="text" placeholder="Enter issue department" id="txtIssueAuth" class="form-control" required></dd>
+                    <dt>Expiry Date</dt>
+                    <dd><input type="Date" placeholder="Enter ID expiry date" id="txtExpiryDate" class="form-control" required></dd>
+                </dl>
+            </div>
+            <div>
+                <button class="btn btn-primary" data-bs-target="#details" data-bs-toggle="modal" onclick="SubmitClick()" id="btnSubmit">Submit</button>
+            </div>
+        </div>
+    </div> 
+
+    <div class="modal fade" id="details">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Details</h4>
+                </div>
+                <div class="modal-body">
+                    <dl class="row">
+                        <dt class="text-secondary">Personal Details</dt>
+                        <dt class="col-6">Full Name</dt>
+                        <dd class="col-6" id="lblName"></dd>
+                        <dt class="col-6">Date Of Birth</dt>
+                        <dd class="col-6" id="lblDOB"></dd>
+                        <dt class="col-6">Email</dt>
+                        <dd class="col-6" id="lblEmail"></dd>
+                        <dt class="col-6">Mobile Number</dt>
+                        <dd class="col-6" id="lblMob"></dd>
+                        <dt class="col-6">Gender</dt>
+                        <dd class="col-6" id="lblGender"></dd>
+                        <dt class="col-6">Occupation</dt>
+                        <dd class="col-6" id="lblOccupation"></dd>
+
+                        <dt class="text-secondary">Identify Details</dt>
+
+                        <dt class="col-6">Id Type</dt>
+                        <dd class="col-6" id="lblIdType"></dd>
+                        <dt class="col-6">ID Number</dt>
+                        <dd class="col-6" id="lblIdNumber"></dd>
+                        <dt class="col-6">Issue Authority</dt>
+                        <dd class="col-6" id="lblIssueAuth"></dd>
+                        <dt class="col-6">Issue Date</dt>
+                        <dd class="col-6" id="lblIssueDate"></dd>
+                        <dt class="col-6">Issue State</dt>
+                        <dd class="col-6" id="lblIssueState"></dd>
+                        <dt class="col-6">Expiry Date</dt>
+                        <dd class="col-6" id="lblExpiryDate"></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-warning " onclick="ModifyData()" data-bs-target="#details" data-bs-toggle="modal">Edit</button>
+                    <button class="btn btn-success" data-bs-dismiss="modal" onclick="SubmitForm()">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
