@@ -6,27 +6,34 @@
     <title>Naukri</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </head>
 <body class="continer-fluid m-0 p-0">
     <header>
-        <div>
-            <div>
-                <img src="images/naukri-logo.png" alt="logo">
+        <div class="d-flex justify-content-center align-items-center justify-content-around header">
+            <div class="d-flex justify-content-center align-items-center">
+                <div>
+                    <img src="images/naukri-logo.png" alt="logo">
+                </div>
+                <div class="header-link">
+                    <span><a href="#" class="ms-5">Jobs</a></span>
+                    <span><a href="#" class="mx-5">Companies</a></span>
+                    <span><a href="#">Services</a></span>
+                </div>
             </div>
-            <div>
-                <span><a href="#">Jobs</a></span>
-                <span><a href="#">Companies</a></span>
-                <span><a href="#">Services</a></span>
+    
+            <div class="d-flex">
+                <div>
+                    <button class="login-btn">Login</button>
+                    <button class="register-btn">Register</button>
+                </div>
+                <span>|</span>
+                <div>
+                    <select>
+                        <option>For employers</option>
+                    </select>
+                </div>
             </div>
-        </div>
-
-        <div>
-            <div>
-                <button>Login</button>
-                <button>Register</button>
-            </div>
-            <span>|</span>
-            <div></div>
         </div>
     </header>
 </body>
