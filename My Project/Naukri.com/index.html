@@ -6,6 +6,7 @@
     <title>Naukri</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </head>
 <body class="continer-fluid m-0 p-0">
@@ -16,25 +17,77 @@
                     <img src="images/naukri-logo.png" alt="logo">
                 </div>
                 <div class="header-link">
-                    <span><a href="#" class="ms-5">Jobs</a></span>
-                    <span><a href="#" class="mx-5">Companies</a></span>
-                    <span><a href="#">Services</a></span>
+                    <span><a href="#" class="ms-5 jobs hover">Jobs</a></span>
+                    <div class="hover-box">
+                        <div>
+                           <ul>
+                                <li><a href="#"><b>Popular categories</b></a></li>
+                                <li><a href="#">IT jobs</a></li>
+                                <li><a href="#">Sales jobs</a></li>
+                                <li><a href="#">Marketing jobs</a></li>
+                                <li><a href="#">Data Science jobs</a></li>
+                                <li><a href="#">Hr jobs</a></li>
+                                <li><a href="#">Engineering jobs</a></li>
+                           </ul>
+                        </div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <span><a href="#" class="mx-5 companies hover">Companies</a></span>
+                    <span><a href="#" class="services hover">Services</a></span>
                 </div>
             </div>
     
-            <div class="d-flex">
+            <div class="d-flex d-flex justify-content-center align-items-center">
                 <div>
                     <button class="login-btn">Login</button>
-                    <button class="register-btn">Register</button>
+                    <button class="register-btn mx-2">Register</button>
                 </div>
-                <span>|</span>
-                <div>
-                    <select>
-                        <option>For employers</option>
-                    </select>
+                <span class="line">|</span>
+                <div class="ms-2">
+                    <span class="emp hover">For employers <span class="bi bi-chevron-down"></span></span>
                 </div>
             </div>
         </div>
     </header>
+    <main>
+        <h1 class="title mt-5">Find your dream job now</h1>
+        <p class="fs-4">5 lakh+ jobs for you to explore</p>
+        <!-- ****** Search - Section ********** -->
+        <section>
+            <div class="search-section d-flex justify-content-center align-items-center bg-white p-4">
+                <div><span class="bi bi-search"></span></div>
+                <div><input type="text" placeholder="Enter skills / designations / compainies"></div>
+                <span>|</span>
+                <div>
+                    <select >
+                        <option >Select experience</option>
+                        <option>Fresher <span>(less than 1 year)</span></option>
+                        <option>1 Year</option>
+                        <option>2 Year</option>
+                        <option>3 Year</option>
+                        <option>4 Year</option>
+                        <option>5 Year</option>
+                    </select>
+                    <!-- <input type="select"> -->
+                </div>
+                <span>|</span>
+                <div><input type="text" placeholder="Enter location"></div>
+                <div>
+                    <button class="search-btn">Search</button>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
+
+<!--
+ <b></b>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+ -->
