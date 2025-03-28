@@ -1,8 +1,13 @@
 body{ 
     background-color: #eef0f1 !important; 
+    /* box-sizing: border-box; */
 }
 header{
+    top: 0;
     background-color: #fff;
+    position: fixed;
+    position: sticky;
+    width: 100%;
 }
 .header{
     padding: 13px;
@@ -89,3 +94,177 @@ input , select{
     outline: none;
     border: none;
 }
+
+.frontend{
+    border: 1px solid lightgray;
+    border-radius: 40px;
+    font-size: 14px;
+    /* padding-left:10px; */
+}
+
+/* ******** job profile section *********** */
+.job-profile{
+    width: 90vw;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.job-profile-box{
+    background-color: #fff;
+    padding: 15px;
+    /* border: 1px lightgray; */
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px lightgray;
+}
+
+/* ******* Headline ********* */
+.headline-section{
+    width: 90vw;
+}
+.headline{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #121224;
+}
+.headline-box{
+    background-color: #fff;
+    padding: 20px;
+    /* border: 1px lightgray; */
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px lightgray;
+}
+.headline-box p{
+    font-size: 12px;
+    font-weight: 500;
+    
+}
+.headline-images img{
+    height: 40px;
+    width: 40px;
+    box-shadow: 0px 0px 3px lightgray;  
+}
+.headline-images{
+    column-gap: 12px;
+}
+.d-flex{
+    column-gap: 20px; 
+    overflow: hidden;
+}
+
+
+
+.company-card{
+    height: auto;
+    max-width: 250px;
+    box-shadow: 0px 0px 10px lightgray;  
+    border-radius: 20px;
+}
+.company-card-box img{
+    width: 195px;
+    height: 50px;
+}
+.company-card-box p{
+    color: #474D6A;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    
+}
+.company-name{
+    background-color:rgba(11, 46, 134, 0.03);
+    border-radius: 10px;
+    width: 100%;
+}
+.view-btn{
+    
+    /* border: 1px solid #275DfD; */
+    padding: 12px;
+    border-radius: 30px;
+    color:  #275DfD;
+    /* color: blue; */
+    font-weight: bold;
+    border: 0;
+    background-color: #EDF4FF;
+}
+.view-all{
+    border: 1px solid #275DfD;
+    padding: 12px;
+    border-radius: 30px;
+    color:  #275DfD;
+    /* color: blue; */
+    font-weight: bold;
+    /* border: 0; */
+    /* background-color: #EDF4FF; */
+}
+
+/* ************************* */
+.naukaricampus{
+    /* box-shadow: 1px 1px 3px lightgray;  */
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 10px;
+   
+    
+}
+
+.nc-heading{
+    color: #121224;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23px;
+}
+.nc-para{
+    margin-top: 6px;
+    max-width: 452px;
+    color: #717b9e;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+.explore{
+    background-color: #275df5;
+    border: 0;
+    width: 200px;
+    font-size: 16px;
+    color: white;
+    border-radius: 20px;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* position: relative; */
+    /* margin: auto; */
+}
+.explore-btn{
+    color: #474d6a;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    border: 1px solid lightgray;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+}
+.tag{
+    position: absolute;
+    top: 0;
+    right: 42px;
+    background-color: #efedff;
+    border-radius: 0px 0px 12px 12px;
+    padding: 5px 10px;
+    color: #474d6a;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 13px;
+}
+
+
+/* ************************************* */
+.discover-job{
+    background: linear-gradient(180deg, rgba(255, 240, 226, 0) 0%, #FFF0E2 100%);;
+}
+
