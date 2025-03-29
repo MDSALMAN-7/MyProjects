@@ -5,9 +5,10 @@ body{
 header{
     top: 0;
     background-color: #fff;
-    position: fixed;
+    
     position: sticky;
     width: 100%;
+    z-index: 1000;
 }
 .header{
     padding: 13px;
@@ -157,6 +158,7 @@ input , select{
 
 
 
+
 .company-card{
     height: auto;
     max-width: 250px;
@@ -210,7 +212,9 @@ input , select{
    
     
 }
-
+.p-r{
+    position: relative;
+}
 .nc-heading{
     color: #121224;
     font-size: 20px;
@@ -265,6 +269,36 @@ input , select{
 
 /* ************************************* */
 .discover-job{
-    background: linear-gradient(180deg, rgba(255, 240, 226, 0) 0%, #FFF0E2 100%);;
+    background: linear-gradient(180deg, rgba(255, 240, 226, 0) 0%, #FFF0E2 100%);
+    width: 80vw;
+    border: 1px solid #f0dac7;
+    border-radius: 20px;
+}
+.discover-img img{
+    width: 390px;
+    height: 170px;
+}
+.sub-headline{
+    margin-top: 12px;
+    width: 360px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--N700, #474D6A);
+}
+
+
+
+.Sponsored-companies{
+    width: 80vw;
+    height: auto;
+}
+.Sponsored-companies .explore-btn{
+    /* background: var(--N400, #E7E7F1); */
+    border: 1px solid var(--N800, #121224);
+    /* font-weight: 700; */
+    font-size: 12px;
+    line-height: 15px;
+    /* color: var(--N800, #121224); */
 }
 
