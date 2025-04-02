@@ -2,6 +2,10 @@ body{
     background-color: #eef0f1 !important; 
     /* box-sizing: border-box; */
 }
+a{
+    text-decoration: none;
+    color: #474D64;
+}
 header{
     top: 0;
     background-color: #fff;
@@ -294,11 +298,48 @@ input , select{
     height: auto;
 }
 .Sponsored-companies .explore-btn{
-    /* background: var(--N400, #E7E7F1); */
+    background: var(--N400, #E7E7F1);
     border: 1px solid var(--N800, #121224);
-    /* font-weight: 700; */
-    font-size: 12px;
-    line-height: 15px;
-    /* color: var(--N800, #121224); */
+    font-weight: 700;
+    color: var(--N800, #121224);
+}
+
+.Sponsored-companies .explore-btn1{
+    background: var(--N100, #fff);
+    border: 1px solid var(--N500, #979EC2);
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 6px 12px;
+    margin-right: 8px;
+    margin-bottom: 12px;
+    display: inline-block;
+    color: var(--N700, #474D6A);
+    cursor: pointer;
+}
+
+.Sponsored-companies-card{
+    box-shadow: 0px 0px 5px lightgray;
+    max-width: 300px;
+    height: 100%;
+}
+.Sponsored-companies-card img{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.cardTag{
+    padding: 4px 8px;
+    margin: 0px;
+    margin-right: 8px;
+    border: 1px solid var(--N400, #E7E7F1);
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 14px;
+    color: var(--N700, #474D6A);
 }
 
