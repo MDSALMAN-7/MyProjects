@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        table {
+            font-family: Arial;
+        }
+        .flag {
+            width: 30px;
+            height: 20px;
+        }
+        .player-img {
+            width: 120px;
+        }
+        .country {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .country-first {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .player-name {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .row {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        .player {
+            padding: 20px;
+        }
+        .rating-first {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .best {
+            font-weight: bold;
+        }
+        thead {
+            color:white;
+        }
+        td {
+            background-size: cover;
+            padding: 5px;
+        }
+        tr {
+            margin-bottom: 10px;
+        }
+        thead th {
+            padding: 10px;
+        }
+        caption {
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color:gray;
+            text-transform: uppercase;
+        }
+        .btn-load {
+            display: inline-block;
+            border:1px solid gray;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table  frame="void" cellspacing="0" cellpadding="0" width="100%">
+        <caption>Men's test Bowling rankings</caption>
+        <colgroup span="4"></colgroup>
+        <thead bgcolor="blue">
+            <tr>
+                <th>Pos</th>
+                <th>Team</th>
+                <th width="300">Players</th>
+                <th>Rating</th>
+                <th>Career Best Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01 <span class="bi bi-chevron-up"> 2 </span> </td>
+                <td><img src="./images/india.png" class="flag"> <span class="country-first">IND</span> </td>
+                <td class="row"  background="./images/icc.jpg" >
+                    <div class="player">
+                        <span class="player-surname">Jasprit</span><br>
+                        <span class="player-name">BUMRAH</span>
+                    </div>
+                    <div>
+                        <img src="./images/bumrah.png" class="player-img">
+                    </div>
+                </td>
+                <td><span class="rating-first">883</span></td>
+                <td valign="center"> <span class="best">883 v Australia at Perth 2024</span> </td>
+            </tr>
+
+            <tr>
+                <td>01 <span class="bi bi-chevron-down"> 1 </span> </td>
+                <td><img src="./images/sf.png" class="flag"> <span class="country">SOUTH AFRICA</span> </td>
+                <td>
+                    Kasigo <b>RABADA</b>
+                </td>
+                <td><span class="rating">872</span></td>
+                <td> <span class="best">902 v Australia at Gqeberha 2018</span> </td>
+            </tr>
+            <tr>
+                <td>01 <span class="bi bi-chevron-down"> 1 </span> </td>
+                <td><img src="./images/aus.png" class="flag"> <span class="country">AUSTRALIA</span> </td>
+                <td>
+                    Josh <b>Hazlewood</b>
+                </td>
+                <td><span class="rating">860</span></td>
+                <td> <span class="best">864 v India at Bengaluru 2017</span> </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5" align="center" height="100">
+                    <span class="btn-load">
+                        LOAD MORE <span class="bi bi-chevron-right"></span>
+                    </span>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

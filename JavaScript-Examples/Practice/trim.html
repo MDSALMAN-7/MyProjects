@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function VerifyCard(){
+            let card = document.getElementById("txtCard").value;
+            let imgCard = document.getElementById("imgCard");
+            if(card.trim() == "4455"){
+                imgCard.src = "../../public/images/kid.jpg";
+            }else{
+                imgCard.src = "../../public/images/men.jpg";
+            }
+        }
+        function VerifySkype(){
+            let skype = document.getElementById("txtSkype").value;
+            let lblSkype = document.getElementById("lblSkype");
+
+            if(skype.endsWith("outlook.com")){
+                lblSkype.innerHTML = "Your skype verified".fontcolor('green');
+            }
+            else{
+                lblSkype.innerHTML = "Invalid Skype Account".fontcolor('red');
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <h4>Pyments Details</h4>
+    <dl class="w-25">
+        <dt>Your Card</dt>
+        <dd class="input-group">
+            <input type="text" onblur="VerifyCard()" id="txtCard" maxlength="16" class="form-control">
+            <img class="input-group-text" id="imgCard" width="70">
+        </dd>
+        <dt>Your <span class="bi bi-skype"></span> Accont</dt>
+        <dd>
+            <input type="text" id="txtSkype" class="form-control" onblur="VerifySkype()">
+        </dd>
+        <dd id="lblSkype"></dd>
+        
+    </dl>
+</body>
+</html>

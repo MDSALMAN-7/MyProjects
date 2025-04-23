@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-Date</title>
+    <script>
+        let departure = new Date();
+
+        departure.setDate(21);
+        departure.setMonth(3);
+
+        let weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"];
+        let months = ["January", "February", "March", "April","May", "June", "July", "August", "September", "October", "November", "December"];
+
+        departure.getYear();
+        document.write(`${weekdays[departure.getDay()]} , ${months[departure.getMonth()]} ${departure.getDate()} - ${departure.getFullYear()}`);
+
+        // document.write(`${weekdays[departure.]}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

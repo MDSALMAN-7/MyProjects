@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Substring</title>
+    <script>
+        let email = prompt("Enter Your Email Address");
+        let email_id = email.substring(0,email.indexOf("@"));
+        let domain = email.substring(email.indexOf("@")+1);
+
+        document.write(`Your Id: ${email_id}<br> Domain : ${domain}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

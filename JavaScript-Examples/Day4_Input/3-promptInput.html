@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function AddClick(){
+            foldername = prompt("Enter Folder Name", "New_Folder");
+            if(foldername==""){
+                alert("Please provide a folder name");
+            } else if(foldername==null) {
+                alert("You canceled..");
+            } else {
+                document.querySelector("p").innerHTML += "Folder Created :" + foldername + "<br>";
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <button onclick="AddClick()" class="bi bi-folder-plus btn btn-primary mt-2"> Add Folder </button>
+    <p></p>
+</body>
+</html>

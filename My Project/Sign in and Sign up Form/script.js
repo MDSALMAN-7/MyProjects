@@ -1,4 +1,3 @@
-
 let signUpBtn = document.getElementsByClassName("signupbtn");
 let signInBtn = document.querySelector('.signinbtn');
 let nameField = document.querySelector('.namefield');

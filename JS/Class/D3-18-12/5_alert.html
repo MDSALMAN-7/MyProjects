@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        function ShowWarning(){
+            document.getElementById("alertWarning").style.display = "block";
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <h2>Alerts</h2>
+    <button onclick="ShowWarning()" class="btn btn-warning my-3"> Show Warnings </button>
+    <div class="alert alert-success alert-dismissible w-50">
+        <h3 class="alert-title">Registered Successfully..</h3>
+        <p>Account created and activation link sent to your email.</p>
+        <a href="#" class="alert-link"> Help? </a><br><br>
+        <button data-bs-dismiss="alert" class="btn btn-success">OK</button>
+    </div>
+    <div id="alertWarning" class="alert alert-warning alert-dismissible w-50" style="display: none;">
+        <button class="btn btn-close" data-bs-dismiss="alert"></button>
+        <h3 class="alert-title">Issues in your register</h3>
+        <p>Account created and activation link sent to your email.</p>
+        <a href="#" class="alert-link"> Help? </a>
+    </div>
+</body>
+</html>

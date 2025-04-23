@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QurySelector</title>
+    <script>
+        function bodyload(){
+            document.querySelector("img").src = "../../public/images/kid.jpg";
+
+            document.querySelector("#btnLogin").value = "Login";
+
+            document.querySelector("#btnRegister").value = "Logged In";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img src="" alt="Kid shopping" height="200" width="200">
+    </div>
+    <div>
+        <h3>Register</h3>
+        User Name : <input type="text"> <input type="button" id="btnLogin">
+    </div>
+    <div>
+        <h3>Login</h3>
+        Email : <input type="text"> OTP : <input type="text" size="4"> <input type="button" id="btnRegister">
+    </div>
+</body>
+</html>

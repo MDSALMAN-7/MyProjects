@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <script>
+        let data = new Map();
+        data.set(1,"Samsung TV"); 
+        data.set("Mobile",{Price:24000.44,Rating:{rate:4.5,count:500}});
+
+        document.write(data.get("Mobile").Price + "<br>");
+        
+        // for(var item of data.entries()){
+        //     document.write(item + "<br>")
+        // }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

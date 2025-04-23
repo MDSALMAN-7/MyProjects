@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Manipulation</title>
+    <script>
+        var categories = ["Home","Electronics","Mobile","Apple","iPhone 15"];
+
+        // document.write(categories.toString()+"<br>");
+
+        // document.write(categories.join("<br>"));
+
+        // categories.map(function(value,index){
+        //     document.write(`<li>[${index+1}] ${value}</li>`);
+        // })
+
+        for(var property in categories){
+            document.write(`${property} : ${categories[property]}<br>`);
+        }
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Formating</title>
+    <script type="text/javascript">
+        function ApplyClick(){
+            let lblMsg=document.getElementById("lblMsg");
+            let size = document.getElementById("txtSize").value;
+            let color = document.getElementById("txtColor").value;
+            let style = document.getElementById("lstStyles").value;
+
+            lblMsg.innerHTML = "Sample project".fontcolor(color).fontsize(size);
+
+            if(style=="Bold"){
+                lblMsg.innerHTML="Sample Project showing the Bold effect".fontcolor(color).fontsize(size).bold();
+            }
+            else if(style=="Italics"){
+                lblMsg.innerHTML="Sample Project showing the Italics effect".fontcolor(color).fontsize(size).italics();
+            }
+            else{
+                lblMsg.innerHTML="Sample Project showing the Cursive effect".fontcolor(color).fontsize(size).oblique();
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Font Size</dt>
+        <dd> <input type="range" value="3" min="1" max="10" id="txtSize"></dd>
+        <dt>Font Color</dt>
+        <dd><input type="color" id="txtColor"></dd>
+        <dt>Font Style</dt>
+        <dd>
+            <select id="lstStyles">
+                <option>Select Style</option>
+                <option>Bold</option>
+                <option>Italics</option>
+                <option>Cursive</option>
+            </select>
+        </dd>
+        
+    </dl>
+    <button onclick="ApplyClick()">Apply</button>
+    <p id="lblMsg"></p>
+</body>
+</html>

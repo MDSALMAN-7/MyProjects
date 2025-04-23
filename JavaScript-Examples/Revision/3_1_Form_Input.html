@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form input</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <dl class="border border-1 border-secondary p-3 rounded w-50 mt-4 ">
+        <h3 class="text-center">Register Product</h3>
+        <dt>Name</dt>
+        <dd><input type="text" name="" id="txtName" class="form-control"></dd>
+        <dt>Price</dt>
+        <dd><input type="number" min="1" max="100000" name="" id="txtPrice" class="form-control"></dd>
+        <dt>Manufactured</dt>
+        <dd><input type="date" id="txtMfd" class="form-control"></dd>
+        <dt>Category</dt>
+        <dd>
+            <select  id="lstCategories" class="form-select">
+                <option>Select Category</option>
+                <option>Footwear</option>
+                <option>Fashion</option>
+                <option>Electronics</option>
+            </select>
+        </dd>
+        <dt>Rating</dt>
+        <dd><input type="range" class="form-range" id="rangeRating" step="0.1" min="1" max="5" value="1"></dd>
+
+        <dt>Stock</dt>
+        <dd class="form-switch"><input type="checkbox" class="form-check-input" id="optStock">
+        <label>Available</label></dd>
+
+        <button class="btn btn-warning w-100 mt-3" data-bs-target="#details" data-bs-toggle="modal" onclick="SubmitClick()">Submit</button>
+    </dl>
+    <div class="modal fade" id="details">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Product Details</h4>
+                </div>
+                <div class="modal-body">
+                    <dl class="row">
+                        <dt class="col-6">Name</dt>
+                        <dd class="col-6" id="lblName"></dd>
+                        <dt class="col-6" >Price</dt>
+                        <dd class="col-6" id="lblPrice"></dd>
+                        <dt class="col-6">Manufactured</dt>
+                        <dd class="col-6" id="lblMfd"></dd>
+                        <dt class="col-6">Category</dt>
+                        <dd class="col-6" id="lblCategory"></dd>
+                        <dt class="col-6">Rating</dt>
+                        <dd class="col-6" id="lblRating"></dd>
+                        
+                        <dt class="col-6">Stock</dt>
+                        <dd class="col-6" id="lblStock"></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-warning w-100" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script class="type/text">
+        function SubmitClick(){
+            document.getElementById("lblName").textContent = document.getElementById("txtName").value;
+            
+            document.getElementById("lblPrice").textContent = document.getElementById("txtPrice").value;
+
+            document.getElementById("lblMfd").textContent = document.getElementById("txtMfd").value;
+
+            document.getElementById("lblCategory").textContent = document.getElementById("lstCategories").value;
+    
+            document.getElementById("lblRating").textContent = document.getElementById("rangeRating").value;
+
+            document.getElementById("lblStock").textContent = document.getElementById("optStock").value;
+            
+            let opt = document.getElementById("optStock").value;
+
+            // if(opt.checked){
+            //     opt.checked===true?"aviablw":"false";
+            //     document.getElementById("lblStock").value = opt;
+            // }
+            // // opt.checked===true?"aviablw":"false";
+            // // document.getElementById("lblStock").value = opt;
+
+            let stockCheckbox = document.getElementById("optStock");
+            let stockStatus = "";
+            if(stockCheckbox.checked){
+                stockStatus = "Available";
+            } else {
+                stockStatus = "Out of Stock";
+            }
+
+            document.getElementById("lblStock").textContent = stockStatus;
+
+        }
+    
+    </script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript">
+        function SubmitClick()
+        {
+            document.getElementById("lblName").textContent = document.getElementById("txtName").value;
+            document.getElementById("lblPrice").textContent = document.getElementById("txtPrice").value;
+            document.getElementById("lblMfd").textContent = document.getElementById("txtMfd").value;
+            document.getElementById("lblRating").innerHTML = "<span class='badge bg-success text-white rounded'>" + document.getElementById("rangeRating").value + "<span class='ms-3 bi bi-star-fill'></span></span>";
+            document.getElementById("lblCategory").textContent = document.getElementById("lstCategories").value;
+
+            stockCheckbox = document.getElementById("optStock");
+            stockStatus = "";
+            if(stockCheckbox.checked){
+                stockStatus = "Available";
+            } else {
+                stockStatus = "Out of Stock";
+            }
+
+            document.getElementById("lblStock").textContent = stockStatus;
+
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <dl class="border border-1 border-secondary p-3 rounded w-50 mt-4">
+        <h3>Register Product</h3>
+        <dt>Name</dt>
+        <dd><input type="text" id="txtName" class="form-control"></dd>
+        <dt>Price</dt>
+        <dd><input type="number" min="1" max="50000" id="txtPrice" class="form-control"></dd>
+        <dt>Manufactured</dt>
+        <dd><input type="date" id="txtMfd" class="form-control"></dd>
+        <dt>Category</dt>
+        <dd>
+            <select id="lstCategories" class="form-select">
+                <option>Select Category</option>
+                <option>Footwear</option>
+                <option>Fashion</option>
+                <option>Electronics</option>
+            </select>
+        </dd>
+        <dt>Rating</dt>
+        <dd><input type="range" class="form-range" step="0.1" min="1" max="5" value="1" id="rangeRating"></dd>
+        <dt>Stock</dt>
+        <dd class="form-switch"><input type="checkbox" class="form-check-input" id="optStock"> <label> Available </label> </dd>
+        <button class="btn btn-warning w-100 mt-3" data-bs-target="#details" data-bs-toggle="modal" onclick="SubmitClick()">Submit</button>
+    </dl>
+    <div class="modal fade" id="details">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Product Details</h4>
+                </div>
+                <div class="modal-body">
+                    <dl class="row">
+                        <dt class="col-6">Name</dt>
+                        <dd class="col-6" id="lblName"></dd>
+                        <dt class="col-6" >Price</dt>
+                        <dd class="col-6" id="lblPrice"></dd>
+                        <dt class="col-6">Manufactured</dt>
+                        <dd class="col-6" id="lblMfd"></dd>
+                        <dt class="col-6">Rating</dt>
+                        <dd class="col-6" id="lblRating"></dd>
+                        <dt class="col-6">Category</dt>
+                        <dd class="col-6" id="lblCategory"></dd>
+                        <dt class="col-6">Stock</dt>
+                        <dd class="col-6" id="lblStock"></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-warning w-100" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> -->

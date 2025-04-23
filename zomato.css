@@ -1,0 +1,275 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+background-image: url(./public/images/zamato2.jpeg);
+height: 65vh;
+background-size: cover;
+/* display: flex; */
+/* justify-content: space-around; */
+/* justify-content: center; */
+}
+main{
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+display: flex;
+justify-content: space-around;
+}
+a{
+    color: white;
+    text-decoration: none;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+.detail{
+margin-top: 20px;
+font-size: 18px;
+}
+.somedetail{
+margin-top: 20px;
+display: flex;
+justify-content: space-evenly;
+font-size: 18px;
+/* margin-left: 25px ;
+margin-right: 25px; */
+}
+.zomatoLogo{
+margin-top: 5%;
+display: flex;
+justify-content: center;
+
+}
+.zomatoLogo img{
+height: 70px;
+width: 350px;
+}
+.dis{
+color:white;
+font-size: 32px;
+display: flex;
+justify-content: center;
+margin-top: 3%;
+}
+.location{
+background-color: white;
+width: 550px;
+display: flex;
+/* justify-content: center; */
+/* align-items: center; */
+justify-content: space-around;
+margin: auto;
+padding: 15px;
+border-radius: 25px;
+margin-top: 3%;
+}
+
+input{
+border: none;
+outline: none;
+margin-left: 10px;
+font-size: 18px;
+}
+
+/* section1 */
+.section1{
+    display: flex;
+    justify-content:center;
+    height: 60vh;
+   
+    
+    /* flex-direction: row; */
+    }
+.firstcard{
+    width: 85%;
+    /* border: 1px solid black; */
+    display: flex;
+}
+.card{
+margin-top: 1.5%;
+display: flex;
+flex-direction: column;
+/* margin-left:20px; */
+margin: auto;
+/* justify-content: space-between; */
+transition: tranform 0.3s ease, scale 0.3s ease;
+
+}
+.card img{
+height: 190px;
+width: 350px;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+}
+.title{
+display: flex;
+flex-direction: column;
+padding:10px;
+border: 0.5px solid gray;
+width: 328px;
+}
+.suggest{
+display: block;
+font-size: 18px;
+font-weight: bold;
+}
+
+
+
+.card:hover{
+transform: translateY(-2px) scale(1);
+}
+
+/* section 2 */
+.collection{
+    display: flex;
+    justify-content: center; 
+    height: 60vh;
+    /* width: 85%; */
+    /* border: 1px solid; */
+    /* margin-top: 3%; */
+    /* 
+     align-items: center;
+      */
+}
+.secondcard{
+    width: 85%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    /* justify-content: space-between; */
+}
+
+.collection .heading{
+    font-size: 40px;
+    /* margin-left: 10%; */
+}
+
+.paragraph{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    font-size: 20px;
+    margin-top: .8%;
+}
+.grey{
+    color: #5c4b4b;
+    /* margin-left: 5%; */
+}
+.red{
+    color: red;
+    /* margin-right: 4%; */
+}
+.card2{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-content: space-between;
+    /* padding: 20px; */
+    margin-top: 20px;
+    /* margin-left:20px; */
+    color: white;
+    font-size: 18px;
+}
+.child{
+    height: 350px;
+    width: 260px;
+    border-radius: 15px;
+    /* margin-left: 7%; */
+    /* margin-right: 6%; */
+    display: flex;
+    flex-direction: column; 
+    justify-content: end;
+    
+}
+.shade{
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 20px; */
+}
+
+.child-card1{
+    background-image: url(./public/images/collection1.png);
+    background-size: cover;
+    /* height: 350px;
+    width: 260px; */
+    border-radius: 15px;
+    /* margin-left: 8%; */
+    /* margin-right: 6%; */
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgba(0,0,0,); */
+}
+.child-card2{
+    background-image: url(./public/images/collection1.png);
+    background-size: cover;
+    
+    
+    /* background-color: rgba(0,0,0,); */
+}
+.child-card3{
+    background-image: url(./public/images/collection1.png);
+    background-size: cover;
+   
+    
+    /* background-color: rgba(0,0,0,); */
+}
+.child-card4{
+    background-image: url(./public/images/collection1.png);
+    background-size: cover;
+  
+    /* margin-right: 7%; */
+    /* background-color: rgba(0,0,0,); */
+}
+
+
+
+/* section3 */
+
+.section3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    height: 60vh;
+    width: 85%;
+    border: 1px solid black;
+    
+}
+main .section3{
+    display: flex;
+    justify-content: center;
+}
+.heading{
+    font-size: 40px;
+    /* left: 0; */
+    /* margin-left: 10%; */
+    /* border: 1px solid; */
+}
+
+.place{
+    width: 100%;
+    display: flex;
+    flex-wrap: warp;
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    flex-wrap: warp; */
+    
+}
+.placename{
+    width: 100px;
+    height: 90px;
+
+    border: 1px solid gray;
+}
+
+

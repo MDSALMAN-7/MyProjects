@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OuterHTML</title>
+    <script>
+        function ChangeText(){
+            result=confirm("Are you sure");
+            if(result==true){
+                document.querySelector("p").outerHTML="<b> Button Clicked..</b>";
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <button onclick="ChangeText()">click me!</button>
+    <p>Click button and change the paragraph text</p>
+</body>
+</html>

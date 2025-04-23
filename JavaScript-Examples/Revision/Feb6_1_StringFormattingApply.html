@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function ApplyClick(){
+            let sample = document.getElementById("Sample");
+            let size = document.getElementById("txtSize").value;
+            let color = document.getElementById("txtColor").value;
+            let style = document.getElementById("lstStyle").value;
+
+            sample.innerHTML = "Sample Text".fontsize(size).fontcolor(color);
+
+            if(style =="Bold"){
+                sample.innerHTML = "Sample Text".fontsize(size).fontcolor(color).bold();
+            }
+            else{
+                sample.innerHTML = "Sample Text".fontsize(size).fontcolor(color).italics();
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Font Size</dt>
+        <dd><input type="range" id="txtSize" min="1" max="7" value="3"></dd>
+        <dt>Font Color</dt>
+        <dd><input type="color" id="txtColor"></dd>
+        <dt>Font Style</dt>
+        <dd>
+            <select id="lstStyle">
+                <option>Bold</option>
+                <option>Italics</option>
+            </select>
+        </dd>
+        <button onclick="ApplyClick()">Apply</button>
+        <p id="Sample">Sample Text</p>
+    </dl>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ApplyClick(){
+            var lblMsg = document.getElementById("lblMsg");
+            var size = document.getElementById("txtSize").value;
+            var color = document.getElementById("txtColor").value;
+            var style = document.getElementById("lstStyles").value;
+
+            lblMsg.innerHTML = "Sample Text".fontsize(size).fontcolor(color);
+
+            if(style=="Bold") {
+                lblMsg.innerHTML = "Sample Text".fontsize(size).fontcolor(color).bold();
+            } else {
+                lblMsg.innerHTML = "Sample Text".fontsize(size).fontcolor(color).italics();
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Font Size</dt>
+        <dd><input type="range" id="txtSize" min="1" max="7" value="3" /></dd>
+        <dt>Font Color</dt>
+        <dd><input type="color" id="txtColor" value="#000000"></dd>
+        <dt>Font Style</dt>
+        <dd>
+            <select id="lstStyles">
+                <option>Select Style</option>
+                <option>Bold</option>
+                <option>Italics</option>
+            </select>
+        </dd>
+    </dl>
+    <button onclick="ApplyClick()">Apply</button>
+    <p id="lblMsg">Sample Text</p>
+</body>
+</html> -->

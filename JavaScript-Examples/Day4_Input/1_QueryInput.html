@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Input</title>
+    <style>
+        dl{
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        dt{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body onload="bodyload()">
+    <h3>Product Name</h3>
+    <dl>
+        <dt>Product Name</dt>
+        <dd id="lblName"></dd>
+        <dt>Price</dt>
+        <dd id="lblPrice"></dd>
+        <dt>Stock</dt>
+        <dd id="lblStock"></dd>
+    </dl>
+</body>
+<script>
+    function bodyload(){
+        params= new URLSearchParams(location.search);
+        document.getElementById("lblName").innerHTML=params.get("Name");
+        document.getElementById("lblPrice").innerHTML=params.get("Price");
+        document.getElementById("lblStock").innerHTML=params.get("Stock");
+    }
+</script>
+</html>

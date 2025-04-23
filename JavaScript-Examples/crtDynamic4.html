@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+    <script>
+        let categories = ["All","Electronics","Footwear","Fashion"];
+
+        function bodyload(){
+            categories.map(function (category){
+                
+                let li = document.createElement("li");
+                li.innerHTML= category;
+                document.querySelector("ol").appendChild(li);
+
+                let option = document.createElement("option");
+                option.text = category;
+                option.value = category;
+                document.querySelector("select").appendChild(option);  
+            
+            })
+        }
+    </script>
+</head>
+<body onload = "bodyload()">
+    <ol>
+
+    </ol>
+    <select>
+
+    </select>
+</body>
+</html>

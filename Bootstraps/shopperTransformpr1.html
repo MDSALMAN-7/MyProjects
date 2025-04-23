@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .men-fashion{
+            width: 520px;
+            height: 500px;
+            position: relative;
+        }
+        .men-fashion img{
+            width: 500px;
+            height: 500px;
+            transition: 1s;
+        }
+        .offer{
+            /* background-color: red; */
+            right: 20px;
+            top: 20px;
+        }
+        .men-fashion img:hover{
+            transition: 1s;
+            margin-left: -10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="men-fashion">
+        <div class="rounded rounded-circle offer position-absolute badge bg-danger">save <br>50%</div>
+        <img src="../public/images/dish.jpg" alt="">
+    </div>
+</body>
+</html>

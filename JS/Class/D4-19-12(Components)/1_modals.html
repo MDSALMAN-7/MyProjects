@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modals</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+     <button data-bs-target="#chat" data-bs-toggle="modal" class="btn btn-primary mt-3 bi bi-chat-quote"></button>
+     <button data-bs-target="#ads" data-bs-toggle="modal" class="btn btn-secondary ms-2 mt-3">Ads</button>
+     
+        <!-- ************* CHAT  *************** -->
+
+     <div class="modal fade" id="chat">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Talk to Advisor Form</h3>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>Your Name</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>Select Course</dt>
+                        <dd>
+                            <select class="form-select">
+                                <option>Course Name</option>
+                            </select>
+                        </dd>
+                        <dt>Mobile</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>Your Name</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>Select Course</dt>
+                        <dd>
+                            <select class="form-select">
+                                <option>Course Name</option>
+                            </select>
+                        </dd>
+                        <dt>Mobile</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>Your Name</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>Select Course</dt>
+                        <dd>
+                            <select class="form-select">
+                                <option>Course Name</option>
+                            </select>
+                        </dd>
+                        <dt>Mobile</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-warning">Submit</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal"> Cancel</button>
+                </div>
+            </div>
+        </div>
+     </div>
+
+        <!-- *********** ADS *********** -->
+
+     <div class="modal fade" id="ads">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Ads</h3>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../../public/images/g.png" width="300" height="300">
+                </div>
+            </div>
+        </div>
+     </div>
+</body>
+</html>

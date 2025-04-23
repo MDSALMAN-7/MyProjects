@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Content</title>
+    <script>
+        function DeleteUser(){
+            result=confirm("sure?\nYou want to delete");
+            if(result==true){
+                document.querySelector("p").textContent="<b>Deleted Successfully...</b>";
+            }
+            else{
+                document.querySelector("p").innerHTML="<b> Cancled..</b>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteUser()">Delete User</button>
+    <p></p>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="../Bootstraps/../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../Bootstraps/../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .container-fluid{
+            background-color: rgb(240, 240, 240);
+        }
+        
+    </style>
+    <script>
+        function submit(){
+            formSubmit = confirm("You want to submit your form \n Are you sure?");
+            if(formSubmit == true){
+                alert("Submitted..");
+            }
+            else{
+                alert("Canceled..");
+            }
+            document.getElementById("lblstatus").style.display="block";
+            document.getElementById("lblstatus").innerHTML = "<b>Added Successfully..</b>";
+        }
+    </script>s
+</head>
+<body >
+    <h1 class="text-center mt-5">Register User</h1> 
+    <div class="container-fluid border border-2 border-primary w-75 p-4">
+
+        <div class="mb-3 mt-3">
+            <label for="username" class="form-check-label mb-1" > Username:</label>
+            <input type="text" class="form-control" placeholder="Enter your username">
+        </div>
+        <div class="mb-3">
+            <label for="username" class="form-check-label mb-1" > Password:</label>
+            <input type="text" class="form-control" placeholder="Enter your password">
+        </div>
+        <div class="mb-3">
+            <label for="username" class="form-check-label mb-1" >Mobile:</label>
+            <input type="text" class="form-control" placeholder="Enter your mobile">
+        </div>
+        <div class="mb-3">
+            <label for="username" class="form-check-label mb-1" >Email</label>
+            <input type="text" class="form-control" placeholder="Enter your email">
+        </div>
+        <div class="gender">
+            <label for="male">Male</label> 
+            <input type="radio" name="gender" value="Male" id="male">
+            <label for="female">Female</label> 
+            <input type="radio" name="gender" value="Female" id="female">
+        </div>  
+        
+        <div class="d-flex justify-content-center mb-2">
+            <button onclick="submit()" class="btn btn-primary p-2 d-flex justify-content-center">Submit</button>
+            <button type="reset" class="btn btn-warning p-2 d-flex justify-content-center ms-2">Reset</button>
+        </div>
+
+        <div id="lblstatus" class="mt-4 text-center ">
+        </div>
+    </div>
+</body>
+</html>

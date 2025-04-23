@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function AddClick(){
+            let folderCreate = prompt("Enter Folder name","Eg. JavaScript,Java");
+            if(folderCreate == ""){
+                alert("Pls provide folder name");
+            }
+            else if(folderCreate==null){
+                alert("you canceled...");
+            }
+            else{
+                document.querySelector("p").innerHTML = "Folder Name :- " + folderCreate;
+            }
+        }
+    </script>
+    
+</head>
+<body class="container-fluid">
+    <button onclick="AddClick()" class="bi bi-folder-plus btn btn-primary m-5">Add Folder</button>
+    <p></p>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create-Folder</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function AddClick(){
+            let folderName = prompt("Enter Forlder Name","Folder_Name");
+            if(folderName == ""){
+                alert("Enter Folder Name");
+            }
+            else if(folderName == null){
+                alert("You Canceled..");
+            }else{
+                document.querySelector("p").innerHTML +=  "Folder Created :" + folderName + "<br>";
+                document.querySelector("button").style.backgroundColor = "red";
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid"> 
+    <button onclick="AddClick()" class="bi bi-folder-plus btn btn-primary mt-2">Add Folder</button>
+    <p></p>
+</body>
+</html> -->

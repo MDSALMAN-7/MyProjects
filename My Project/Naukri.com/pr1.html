@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naukri</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        header{
+    top: 0;
+    background-color: #fff;
+    
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.header{
+    padding: 13px;
+}
+.header-link a{
+    text-decoration: none;
+    color: #474D64;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* **** Header Button********* */
+.login-btn{
+    width: 80px;
+    border: 1px solid #275DfD;
+    padding: 8px;
+    border-radius: 30px;
+    color:  #275DfD;
+    font-weight: 500;
+}
+.register-btn{
+    width: 100px;
+    background-color: orangered;
+    border: 0;
+    padding: 8px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.line{
+    color: lightgray;
+    font-size: 20px;
+    font-weight: 100;
+}
+.emp{
+    color: #474D64;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* ******* Hover ********* */
+.hover:hover{
+    
+    border-bottom: 3px solid orangered;
+    
+}
+.hover-box{
+    display: none;
+}
+.naukaricampus{
+    /* box-shadow: 1px 1px 3px lightgray;  */
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 10px;
+   
+    
+}
+.p-r{
+    position: relative;
+}
+.nc-heading{
+    color: #121224;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23px;
+}
+.nc-para{
+    margin-top: 6px;
+    max-width: 452px;
+    color: #717b9e;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+.explore{
+    background-color: #275df5;
+    border: 0;
+    width: 200px;
+    font-size: 16px;
+    color: white;
+    border-radius: 20px;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* position: relative; */
+    /* margin: auto; */
+}
+.explore-btn{
+    color: #474d6a;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    border: 1px solid lightgray;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+}
+.tag{
+    position: absolute;
+    top: 0;
+    right: 42px;
+    background-color: #efedff;
+    border-radius: 0px 0px 12px 12px;
+    padding: 5px 10px;
+    color: #474d6a;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 13px;
+}
+
+
+    </style>
+</head>
+<body class="continer-fluid m-0 p-0">
+    <header>
+        <div class="d-flex justify-content-center align-items-center justify-content-around header">
+            <div class="d-flex justify-content-center align-items-center">
+                <div>
+                    <img src="images/naukri-logo.png" alt="logo">
+                </div>
+                <div class="header-link">
+                    <span><a href="#" class="ms-5 jobs hover">Jobs</a></span>
+                    <div class="hover-box">
+                        <div>
+                           <ul>
+                                <li><a href="#"><b>Popular categories</b></a></li>
+                                <li><a href="#">IT jobs</a></li>
+                                <li><a href="#">Sales jobs</a></li>
+                                <li><a href="#">Marketing jobs</a></li>
+                                <li><a href="#">Data Science jobs</a></li>
+                                <li><a href="#">Hr jobs</a></li>
+                                <li><a href="#">Engineering jobs</a></li>
+                           </ul>
+                        </div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <span><a href="#" class="mx-5 companies hover">Companies</a></span>
+                    <span><a href="#" class="services hover">Services</a></span>
+                </div>
+            </div>
+    
+            <div class="d-flex d-flex justify-content-center align-items-center">
+                <div>
+                    <button class="login-btn">Login</button>
+                    <button class="register-btn mx-2">Register</button>
+                </div>
+                <span class="line">|</span>
+                <div class="ms-2">
+                    <span class="emp hover">For employers <span class="bi bi-chevron-down"></span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="mt-5 naukaricampus p-r p-2 d-flex justify-content-center align-items-center">
+            
+                <div class="tag">
+                    Just launched
+                </div>
+                <div>
+                    <img src="images/naukricampus.png" alt="">
+                </div>
+                <div>
+                    <p class="nc-heading mt-3">Introducing a career platform for college students & fresh grads</p>
+                    <p class="nc-para">Explore contests, webinars, take aptitude test, prepare for your dream <br> career & find jobs & internships</p>
+                    <div class="mt-4">
+                        <span class="explore-btn">Expert speak <span class="bi bi-chevron-right"></span></span>
+                        <span class="explore-btn mx-1">Contest<span class="bi bi-chevron-right"></span></span>
+                        <span class="explore-btn">NCAT <span class="bi bi-chevron-right"></span></span>
+                        <span class="explore-btn mx-1">Pathfinder <span class="bi bi-chevron-right"></span></span>
+                        <span class="explore-btn">Job & internships <span class="bi bi-chevron-right"></span></span>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center ">
+                    <button class="explore me-3 ms-3">Explore now</button>
+                </div>  
+        </section>
+    </main>
+    <footer class="" style="margin-bottom: 10000px;">
+
+    </footer>
+</body>
+</html>
+
+<!--
+ -->

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for In loop</title>
+  
+</head>
+<body>
+    <ul id="courseDetail">
+        
+    </ul>
+    <script>
+        let course ={
+            title:"Java Full Stack Course",
+            duration:"4 months",
+            level:"Biggners"
+        };
+
+        const ulItem = document.getElementById("courseDetail");
+        for(let property in course){
+            // console.log(`Title = ${course.title} \n Age=${course.duration} \n Grade = ${course.level}`);
+
+            const listItem = document.createElement("li");
+
+            listItem.innerHTML = `${property}: ${course[property]}`;
+
+            ulItem.appendChild(listItem);
+            
+        }
+    </script>
+</body>
+</html>

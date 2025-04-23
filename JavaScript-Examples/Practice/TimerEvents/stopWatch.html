@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop watch</title>
+    <script>
+        // var count = 101;
+        // var seconds = 0;
+        // function Timer(){
+        //     count++;
+        //     if(count===900){
+        //         count = 101;
+        //         seconds++;
+        //     }
+        //     document.getElementById("milliSeconds").innerHTML = count + " ms";
+        //     document.getElementById("seconds").innerHTML = seconds + " s";
+           
+        // }
+        // function StartClick(){
+        //    window.thread = setInterval(Timer,1);
+        // }
+        // function StopClick(){
+        //     clearInterval(thread);
+        // }
+        let count = setMilliSeconds();
+        function StartClick(){
+            document.getElementById("milliSeconds").innerHTML =count + "ms";
+        }
+    </script>
+    <style>
+        .clock {
+            border :1px solid gray;
+            padding: 20px;
+            width: 200px;
+            margin: 20px;
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="StartClick()">Start</button>
+    <button onclick="StopClick()">Stop</button>
+    <div align ="center" style="display: flex;" class="clock">
+       <div id="seconds"></div>
+       <div id="milliSeconds"></div>
+    </div>
+</body>
+</html>

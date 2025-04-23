@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <link rel="stylesheet" href="../Bootstraps/../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../Bootstraps/../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h2>Alerts</h2>
+    <aside class="alert alert-danger w-25 alert-dismissible">
+        <button data-bs-dismiss="alert" class="btn btn-close"></button>
+        <p>Ads</p>
+        <img src="../public/images/kids-fashion.jpg" width="100%" height="200">
+    </aside>
+    <div class="alert alert-success alert-dismissible w-50">
+        <button class="btn btn-close" data-bs-dismiss="alert"></button>
+        <h3 class="alert-title">Registered Successfully</h3>
+        <p>Activation link sent to your email</p>
+        <div class="mb-4">
+            <a href="#" class="alert-link"> Help </a>
+        </div>
+        <button data-bs-dismiss="alert" class="btn btn-success">OK</button>
+    </div>
+    <div class="alert alert-warning alert-dismissible w-50">
+        <h3>Please check the following errors</h3>
+        <ol>
+            <li>User Name min 10 chars</li>
+            <li>Password atleast one uppercase</li>
+        </ol>
+        <button data-bs-dismiss="alert" class="btn btn-warning">OK</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Id</title>
+    <script type="text/javascript">
+        function bodyload(){
+            document.getElementById("poster").src="../../../public/images/g.png";
+            document.getElementById("login").value="Login";
+            document.getElementById("register").value="Register";
+        }
+    </script>
+    <style>
+        #poster{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body onload="bodyload()">
+    <div >
+        <img src="" alt="" height="100" width="100" border="1" id="poster">
+    </div>
+
+    <div>
+        <form action="">
+            <h2>User Login</h2>
+            <label for="">User Name</label>
+            <input type="text">
+            <input type="button" name="" id="login">
+        </form>
+    </div>
+
+    <div>
+        <h2>Register</h2>
+        <label >Eamil</label>
+        <input type="text" name="" id="">
+        <label for="">Mobile</label>
+        <input type="text">
+        <input type="button" id="register">
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr lenght</title>
+    <script type="text/javascript">
+        function VerifyRequired(){
+            let username = document.getElementById("txtName").value;
+            let lblName = document.getElementById("lblName");
+            if(username.length==0){
+                lblName.innerHTML = "User Name Required".fontcolor("red");
+            }else{
+                if(username.length<6){
+                    lblName.innerHTML = "User Name is too weak".fontcolor("red");
+                }
+                else{
+                    lblName.innerHTML = "";
+                }
+            }
+        }
+        function VerifyComments(){
+            let comments =  document.getElementById("txtcomments").value;
+            let lblComments = document.getElementById("lblComments");
+
+            lblComments.innerHTML=`${(100-comments.length)} chars left.`.fontcolor("green");
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" onblur="VerifyRequired()" onkeyup="VerifyRequired()" id="txtName"></dd>
+        <dd id="lblName"></dd>
+        <dt>Your Comments</dt>
+        <dd>
+            <textarea  id="txtcomments" maxlength="100" rows="8" cols="21" onkeyup="VerifyComments()"></textarea>
+        </dd>
+        <dd id="lblComments"></dd>
+    </dl>
+</body>
+</html>

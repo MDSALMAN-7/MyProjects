@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+    <script>
+        function SearchClick(){
+            let result = prompt("Enter you search","Eg. HTML,CSS,JavaScript");
+            if(result == ""){
+                alert("Pls enter some details");
+            }
+            else if(result==null){
+                alert("You Canceled..")
+            }
+            else{
+                document.querySelector("p").innerHTML = "Searching for :- "+result;
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="SearchClick()">Search</button>
+    <p></p>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+    <script>
+        function SearchClick(){
+            result = prompt("Enter search String","eg: JavaScript,CSS,HTML");
+            if(result==""){
+                alert("Please Enter a search string");
+            }
+            else if(result==null){
+                alert("You Canceled..")
+            }
+            else{
+                document.querySelector("p").innerHTML = "Searching for :- " + result;
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="SearchClick()">Search</button>
+    <p></p>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+    <script>
+        function SearchClick(){
+            let result = prompt("Enter search String","eg: JavaScript,HTML,CSS");
+            if(result == ""){
+                alert("Please enter");
+            }else if(result == null){
+                alert("you cancled..");
+            }else{
+                document.querySelector("p").innerHTML = "Searching for " + result;
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="SearchClick()">Search</button>
+    <p></p>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function SearchClick(){
+           result = prompt("Enter search string","eg: Javascript, CSS, HTML");
+           if(result==""){
+              alert("Please enter a search string");
+           } else if(result==null){
+              alert("You canceled..");
+           } else {
+              document.querySelector("p").innerHTML = "Searching for " + result;
+           }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="SearchClick()">Search</button>
+    <p></p>
+</body>
+</html> -->
+
+

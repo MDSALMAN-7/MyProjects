@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .widget {
+            width: 700px;
+            height: 300px;
+            background-image: url("../../public/images/ki.jpg");
+            background-size: 50% 100%;
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-color: rgb(7, 139, 192);
+            box-shadow: 5px 5px 2px black;
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        #lblTemp {
+            font-size: 50px;
+            font-family: Arial;
+            color:white;
+        }
+    </style>
+    <script>
+        var cityName = '';
+        function LoadWeatherData(){
+            var api_key = "1318ca6725c69160d346c41fc0612596";
+            var url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${api_key}&units=metric`;
+
+            fetch(url)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                console.log(data);
+                document.getElementById("lblCity").innerHTML = `${data.name.toUpperCase()}<br><span class='text-warning fs-4'>${data.weather[0].description.toUpperCase()}</span>`;
+                document.getElementById("lblTemp").innerHTML = ` <span class='bi bi-sun-fill'></span> ${Math.round(data.main.temp)} &deg; C`;
+                document.getElementById("lblWind").innerHTML = `${data.wind.speed} KMPH`;
+                document.getElementById("lblHumid").innerHTML = `${data.main.humidity} %`;
+            })
+        }
+        function SearchClick(){
+            cityName = document.getElementById("txtCity").value;
+            LoadWeatherData();
+        }
+        function CityChange(){
+            cityName = document.getElementById("lstCities").value;
+            LoadWeatherData();
+        }
+    </script>
+</head>
+<body>
+   <div class="widget">
+        <div style="padding: 20px;">
+            <div class="input-group">
+                <input type="text" id="txtCity" placeholder="Enter City Name" class="form-control">
+                <button onclick="SearchClick()" class="bi bi-search btn btn-warning"></button>
+            </div>
+            <div class="d-flex justify-content-center align-items-center" style="height:100%">
+                <div>
+                    <span id="lblTemp"></span>
+                    <dl class="text-light row">
+                        <dt class="col-3">Wind</dt>
+                        <dd class="col-9" id="lblWind"></dd>
+                        <dt class="col-3">Humidity</dt>
+                        <dd class="col-9" id="lblHumid"></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 100px;">
+            <select id="lstCities" class="form-select" onchange="CityChange()">
+                <option>Frequently Viewed</option>
+                <option>Delhi</option>
+                <option>Hyderabad</option>
+                <option>Chennai</option>
+            </select>
+            <h2 id="lblCity"></h2>
+           
+        </div>
+   </div>
+</body>
+</html>

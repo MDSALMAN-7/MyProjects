@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>By Sir Accordian</title>
+    <link rel="stylesheet" href="../Bootstraps/../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../Bootstraps/../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <nav class="w-25">
+        <div class="accordion" id="menu">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button data-bs-target="#electronics" data-bs-toggle="collapse" class="accordion-button">Electronics</button>
+                </div>
+                <div class="accordion-collapse collapse" id="electronics" data-bs-parent="#menu">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Televisions</li>
+                            <li>Watches</li>
+                            <li>Mobiles</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button data-bs-target="#fashion" data-bs-toggle="collapse" class="accordion-button">Fashion</button>
+                </div>
+                <div class="accordion-collapse collapse" id="fashion" data-bs-parent="#menu">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Women Fasion</li>
+                            <li>Mens Fashion</li>
+                            <li>Kids Fashion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Practice</title>
+    <link rel="stylesheet" href="../Bootstraps/../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../Bootstraps/../node_modules/bootstrap/dist/css/bootstrap.css">    
+</head>
+<body>
+    <h2 class="text-center">Register User</h2>
+    <form method="get" action="./review.html" class="container-fluid border border-1 border-dark w-50 p-4">
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" name="Name"></dd>
+            <dt>Age</dt>
+            <dd><input type="number" name="Age"></dd>
+            <dt>Date of Birth</dt>
+            <dd><input type="date" name="Dob"></dd>
+            <dt>City</dt>
+            <dd>
+                <select name="City">
+                    <option>Select Your City</option>
+                    <option>Delhi</option>
+                    <option>Hyd</option>
+                </select>
+            </dd>
+            <dt>Gender</dt>
+            <dd>
+                <input type="radio" name="gender" value="Male"> <label>Male</label>
+                <input type="radio" name="gender" value="Female"> <label>Female</label>
+            </dd>
+        </dl>
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>

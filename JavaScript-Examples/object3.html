@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var Id = Symbol();
+    
+        var product = {
+            [Id]:101,
+            Name : "Samsung TV",
+            Price: 45500.44,
+            Stock : true,
+        }
+        Object.keys(product).map(function(key){
+            document.write(key+"<br>");
+        });
+        document.write(`Product Id = ${product[Id]}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

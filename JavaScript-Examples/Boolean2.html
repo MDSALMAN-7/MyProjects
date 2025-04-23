@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>2 Boolean</title>
+    <script>
+        function Toggle(){
+            document.getElementById("btnToggle").innerHTML = (document.getElementById("btnToggle").innerHTML==="Show")?"Hide":"Show";
+            document.getElementById("imgContainer").style.display = (document.getElementById("imgContainer").style.display==="none")?"block":"none";
+        }
+        function SortClick(){
+            document.getElementById("btnSort").className = (document.getElementById("btnSort").className==="bi bi-sort-alpha-down btn btn-warning")?"bi bi-sort-alpha-up btn btn-danger":"bi bi-sort-alpha-down btn btn-warning";
+        }
+        function StockChange(){
+            var stockCheckbox = document.getElementById("chkStock");
+            var lblStock = document.getElementById("lblStock");
+
+            lblStock.innerHTML = (stockCheckbox.checked)?"Available":"Out of Stock";
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <button id="btnToggle" onclick="Toggle()">Show</button>
+    <br><br>
+    <div id="imgContainer" style="display: none;">
+        <img src="../public/images/women-fashion.jpg" width="100" height="100">
+    </div>
+    <br><br>
+
+    <button id="btnSort" onclick="SortClick()" class="bi bi-sort-alpha-down btn btn-warning"></button>
+    <br><br>
+    
+    <input type="checkbox" onchange="StockChange()" id="chkStock"> <label id="lblStock">Out of Stock</label>
+</body>
+</html>

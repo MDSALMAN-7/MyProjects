@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopper2</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css"> -->
+
+    <style>
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding:20px;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .brand-title{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            
+        }
+        span{
+            /* font-size: 16px; */
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        article{
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            padding: 15px;
+            color:white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+
+        }
+        .bi-lightning-fill{
+            color: yellow;
+        }
+        main{
+            margin-top: 20px;
+            height: 450px;
+            display: grid;
+            grid-template-columns:4fr 4fr 4fr;
+        }
+        .women-fashion{
+            background-image:url("./public/images/women.jpg") ;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .men-fashion{
+            background-image:url("./public/images/men.jpg") ;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .kids-fashion{
+            background-image:url("./public/images/kid.jpg") ;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .main-title{
+            font-size:48px ;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 2px black;
+        }
+        .shopping-button{
+            background-color: white;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="brand-title">Shopper</span>
+        </div>
+
+        <div>
+            <nav>
+                <span>Home</span>
+                <span>Pages</span>
+                <span>Blog</span>
+                <span>Docs</span>
+                <span>shop</span>
+                <span>Catalog</span>
+            </nav>
+        </div>
+
+        <div>
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart3"></span>
+        </div>
+    </header>
+    <article>
+        <span class="bi bi-lightning-fill"></span>
+        HAPPY HOLIDAY DEALS ON EVERYTHING
+        <span class="bi bi-lightning-fill"></span>
+    </article>
+    <main>
+        <div class="women-fashion">
+            <div class="main-title">Women</div>
+
+            <div class="shopping-button">Shop Women <span class="bi bi-arrow-right"></span></div>
+        </div>
+
+        <div class="men-fashion">
+            <div class="main-title">Men</div>
+
+            <div class="shopping-button">Shop Men <span class="bi bi-arrow-right"></span></div>
+        </div>
+
+        <div class="kids-fashion">
+            <div class="main-title">Kids</div>
+
+            <div class="shopping-button">Shop Kid <span class="bi bi-arrow-right"></span></div>
+        </div>
+    </main>
+</body>
+</html>

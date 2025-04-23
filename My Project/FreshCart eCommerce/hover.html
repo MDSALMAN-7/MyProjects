@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hover Box</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 50px;
+    }
+
+    .menu {
+      position: relative;
+      display: inline-block;
+    }
+
+    .menu-text {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .hover-box {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f1f1f1;
+      width: 200px;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+      visibility: hidden;
+      z-index: 1;
+    }
+
+    .menu:hover .hover-box {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <div class="menu-text">Home</div>
+    <div class="hover-box">
+      <p>This is a hover box that appears from below.</p>
+      <p>You can put links or content here.</p>
+    </div>
+  </div>
+
+</body>
+</html>

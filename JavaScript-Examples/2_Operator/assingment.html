@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+    <script>
+        function SubmitClick(){
+            // let courseName = "";
+            // let lblMsg = document.getElementById("lblMsg");
+            // let courseCheckboxes = document.getElementsByName("Course");
+            // for(var checkbox of courseCheckboxes){
+            //     if(checkbox.checked){
+            //         courseName += checkbox.value + "<br>";
+            //     }
+            // }
+            // lblMsg.innerHTML = `<h2>Selected Courses</h2>${courseName}`;
+
+
+            let courseName = "";
+            let totalFee = 0;
+
+            let lblMsg = document.getElementById("lblMsg");;
+            let courseCheckboxes = document.getElementsByName("Course");
+
+            for(var checkbox of courseCheckboxes){
+                if(checkbox.checked){
+                    courseName += checkbox.id + "<br>";
+                    totalFee += parseInt(checkbox.value);
+                }
+            }
+            lblMsg.innerHTML = ` Selected Curses :${courseName} Total Amount : ${totalFee}`;
+        }
+    </script>
+    <style>
+        ul{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><input id="Java" type="checkbox" name="Course" value="3500">Java</li>
+        <li><input id="NodeJs" type="checkbox" name="Course" value="1500">Node Js</li>
+        <li><input id="Js" type="checkbox" name="Course" value="1500">javascript</li>
+        <li><input id="Python" type="checkbox" name="Course" value="4000">Python</li>
+        
+    </ul>
+    <button onclick="SubmitClick()">Submit</button>
+    <p id="lblMsg"></p>
+</body>
+</html>

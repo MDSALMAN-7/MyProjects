@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offcanvas</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <nav class="p-2 bg-dark text-white d-flex justify-content-between">
+        <button data-bs-target="#navbar" data-bs-toggle="offcanvas" class="bi bi-justify btn btn-light"></button>
+        <span class="fs-3 ms-2 fw-bold">Amazon</span>
+        <button data-bs-target="#cart" data-bs-toggle="offcanvas" class="btn btn-warning bi bi-cart4"></button>
+    </nav>
+    <div class="offcanvas offcanvas-start" id="navbar">
+        <div class="offcanvas-header bg-dark text-white">
+            <h3>Amazon Shopping</h3>
+            <button class="btn btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+           <ul>
+            <li>Home</li>
+            <li>Electronics</li>
+            <li>Footwear</li>
+            <li>Fashion</li>
+           </ul>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" id="cart">
+        <div class="offcanvas-header bg-warning text-white">
+            <h3>Your Cart Items</h3>
+            <button class="btn btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+           <table class="table table-hover">
+             <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Price</th>
+                </tr>
+             </thead>
+             <tbody>
+                <tr>
+                    <td>Mobile</td>
+                    <td>12300.44</td>
+                </tr>
+             </tbody>
+           </table>
+        </div>
+    </div>
+</body>
+</html>

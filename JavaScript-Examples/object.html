@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let product = {
+            Name:"Samsung TV",
+            Price:45500.44,
+            Stock:true,
+            Cities:["Delhi","Hyd"],
+            Rating:{Rate:4.2,Count:500},
+            Qty:1,
+            Total: function(){
+                return this.Qty*this.Price;
+            },
+            Print: function(){
+                document.write(`Name = $(this.Name)<br>Price=${this.Price}<br>Stock=${this.Stock}<br>Cities=${this.Cities}<br>Rating=${this.Rating.Rate}
+                <br>qty=${this.Qty}
+                <br>Total=${this.Total()}`);
+            }
+        }
+        product.Qty = parseInt(prompt("Enter Quantity"));
+        product.Print();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

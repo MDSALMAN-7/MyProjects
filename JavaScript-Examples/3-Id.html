@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id</title>
+    <script>
+        function bodyload(){
+            document.getElementById("pic").src="../public/images/kid.jpg";
+            document.getElementById("btnRegister").value="Register";
+            document.getElementById("btnLogin").value="Logged In";
+            
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <nav>
+        <div>
+
+        </div>
+    </nav>
+    <div>
+        <img src="" alt="" id="pic">
+    </div>
+    <div>
+        <form action="">
+            <h3>Register</h3>
+            User Name: <input type="text"> <input type="button" id="btnRegister">
+        </form>
+    </div>
+    <div>
+        <h3>Login</h3>
+        Email : <input type="text">OTP : <input type="text"><input type="button" id="btnLogin">
+    </div>
+</body>
+</html>

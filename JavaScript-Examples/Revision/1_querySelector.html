@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector</title>
+    <script>
+        function bodyload(){
+            document.getElementById("img").src = "../../public/images/kid.jpg";
+
+            document.querySelector("#btnLogin").value = "Login";
+
+            document.querySelector(".btnRegister").value = "Register";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img width="200" height="200" id="img">
+    </div>
+    <div>
+        <form >
+            <h3>Register</h3>
+            User Name : <input type="text"> <input type="button" id="btnLogin">
+        </form>
+    </div>
+    <div>
+        <h3>Login</h3>
+        Email : <input type="email"> OTP : <input type="text" size="3"> <input type="button" class="btnRegister">
+    </div>
+</body>
+</html>

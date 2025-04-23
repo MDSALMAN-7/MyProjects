@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsonTable</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <script>
+        function bodyload(){
+            fetch('../data/products.json')
+            .then(function(response){
+                return response.json();
+            })
+
+            .then(function(products){
+                products.map(function(product){
+                    let tr = document.createElement("tr");
+                    let tdTitle = document.createElement("td");
+                    let tdPrice = document.createElement("td");
+                    let tdImage = document.createElement("td");
+                    let tdActions = document.createElement("td");
+
+                    tdTitle.innerHTML = product.title;
+                    tdPrice.innerHTML = product.price.toLocaleString('en-in');
+                    tdImage.innerHTML = `<img src = ${product.image} width = "100" height="100">`;
+
+                    tdActions.innerHTML = `<button class="bi mx-2 bi-eye btn btn-primary"></button> <button class ="bi mx-2 bi-pen btn btn-warning"></button> <button class="bi mx-2 bi-trash btn btn-danger"></button> `;
+
+                    tr.appendChild(tdTitle);
+                    tr.appendChild(tdImage);
+                    tr.appendChild(tdPrice);
+                    tr.appendChild(tdActions);
+
+                    document.querySelector("tbody").appendChild(tr);
+                })
+            })
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <h2>Apple Mobile</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th width="300">Title</th>
+                <th width="200">Preview</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>

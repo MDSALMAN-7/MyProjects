@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match 2</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function VerifyPassword(){
+            var password = document.getElementById("txtPwd").value;
+            var regExp = /(?=.*[A-Z])\w{4,15}/;
+            var lblPwd = document.getElementById("lblPwd");
+            var pwdBar = document.getElementById("pwdBar");
+
+            if(password.length==0){
+                 lblPwd.innerHTML = "Password Required".fontcolor('red');
+            } else {
+                if(password.match(regExp)){
+                lblPwd.innerHTML = "Strong Password";
+                pwdBar.style.width = "100%";
+                pwdBar.className = "progress-bar progress-bar-animated progress-bar-striped bg-success";
+                } else {
+                    if(password.length<4){
+                        lblPwd.innerHTML = "Poor Password";
+                        pwdBar.style.width = "20%";
+                        pwdBar.className = "progress-bar progress-bar-animated progress-bar-striped bg-danger";
+                    } else {
+                        lblPwd.innerHTML = "Weak Password";
+                        pwdBar.style.width = "70%";
+                        pwdBar.className = "progress-bar progress-bar-animated progress-bar-striped bg-warning";
+                    }
+                }
+            }
+        }
+    </script>
+    
+</head>
+<body class="container-fluid">
+    <dl class="mt-4 w-50">
+        <dt>Password</dt>
+        <dd><input type="password" class="form-control" onkeyup="VerifyPassword()" id="txtPwd"></dd>
+        <dd>
+            <div class="progress">
+                <div id="pwdBar">
+                    <span id="lblPwd"></span>
+                </div>
+            </div>
+        </dd>
+    </dl>
+</body>
+</html>
+
+

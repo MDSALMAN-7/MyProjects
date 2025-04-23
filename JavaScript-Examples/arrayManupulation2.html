@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ButtonClick(){
+            let img = document.createElement("img");
+            
+            img.src = "../public/images/kid.jpg";
+            img.width = "200";
+            img.height = "200";
+            document.getElementById("container").appendChild(img);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="ButtonClick()">Your Profile Photo</button>
+    <br>
+    <div id="container">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Test 2</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        main{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .card{
+            margin-top: 10%;
+            width: 30%;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 2px 2px 10px lightgray;
+            border-radius: 10px;
+        }
+        span{
+            display: block;
+            display: flex;
+            justify-content: center;
+            /* padding: 10px; */
+        }
+        .card img{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            width: 100%;
+            height: 54%;
+        }
+        .food{
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .price{
+            color: green;
+            font-weight: bold;
+            padding: 10px;
+        }
+        button{
+            display: flex;
+            justify-content: center;
+            /* width: 90px; */
+            background-color: rgb(107, 197, 233);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="card">
+            <img src="./public/images/dish.jpg" alt="">
+
+            <span class="food">Food 1</span>
+            <span>Delicious meal, freshly prepared.</span>
+            <span class="price">$9.99</span>
+            <span><button>
+                ORDER NOW
+            </button></span>
+        </div>
+        <div class="card">
+            <img src="./public/images/dish.jpg" alt="">
+
+            <span class="food">Food 2</span>
+            <span>A healthy and tasty option.</span>
+            <span class="price">$12.99</span>
+            <span><button>
+                ORDER NOW
+            </button></span>
+        </div>
+        <div class="card">
+            <img src="./public/images/dish.jpg" alt="">
+
+            <span class="food">Food 3</span>
+            <span>Perfect for quick snacks</span>
+            <span class="price">$5.99</span>
+            <span><button>
+                ORDER NOW
+            </button></span>
+        </div>
+       
+    </main>
+</body>
+</html>

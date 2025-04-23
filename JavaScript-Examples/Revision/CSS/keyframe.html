@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        @keyframes Blink
+        {
+            from {
+                opacity: 0;
+                font-size: 5px;
+                top:0px;
+                left: 0px;
+            }
+            50% {
+                transform: rotate(360deg);
+                top:300px;
+                left: 300px;
+            }
+            to {
+                opacity: 1;
+                font-size: 100px;
+                top:0px;
+                right:0px;
+            }
+        }
+
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .bi-star-fill {
+            font-size: 100px;
+            animation-name: Blink;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="bi bi-star-fill"></div>
+</body>
+</html>

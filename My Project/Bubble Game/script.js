@@ -1,5 +1,5 @@
 let score = 0;
-let timer = 5;
+let timer = 10;
 let hitrn = 0;
 
 function increaseScore(){
@@ -29,7 +29,13 @@ function runTimer(){
             document.querySelector("#timervalue").textContent = timer;
         }else{
             clearInterval(stoptimer);
-            document.querySelector(".p-bottom").innerHTML = `<h1>Game over</h1>`;
+            document.querySelector("#hitvalue").innerHTML=0;
+            document.querySelector("#scorevalue").innerHTML=0;
+            document.querySelector(".p-bottom").innerHTML = `<h1>Game over <br> Your Score is ${score}</h1>
+            
+            <h1></h>
+           
+            `;
         }
     },1000)
 }
@@ -37,7 +43,7 @@ function runTimer(){
 
 document.querySelector(".p-bottom")
 .addEventListener('click',function(dets){
-   let clickedNumber = Number( dets.target.textContent);
+   let clickedNumber = Number(dets.target.textContent);
    if(clickedNumber === hitrn){
     increaseScore();
     makeBubble();

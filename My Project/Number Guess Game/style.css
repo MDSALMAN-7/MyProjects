@@ -11,3 +11,6 @@ html,body{
 .main{
     height: 100vh;
 }
+p{
+    font-weight: bold;
+}

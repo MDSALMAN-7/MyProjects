@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        count = 0;
+        function AddClick(){
+            console.log("Add Button Clicked");
+            flag = confirm("Are you sure\nWant to Add?");
+            if(flag==true){
+                console.warn("OK is clicked");
+                count++;
+                document.getElementById("lblCount").textContent = count;
+                document.getElementById("lblStatus").outerHTML = "<h1>Added Successfully..</h1>";
+                console.error("Adding Completed");
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <header class="d-flex justify-content-between p-2">
+        <h3>Shopper</h3>
+        <button class="bi bi-cart4 btn position-relative"><span class="position-absolute badge bg-danger rounded rounded-circle" id="lblCount"></span></button>
+    </header>
+    <section class="mt-4">
+        <div>
+            <img src="../../../public/images/kid.jpg" width="200" height="200">
+            <br><br>
+            <button onclick="AddClick()" class="btn btn-primary bi bi-cart"> Add to Cart</button>
+        </div>
+        <p id="lblStatus" class="mt-4">click add to cart your product</p>
+    </section>
+</body>
+</html>

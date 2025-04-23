@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <script>
+        let user = {
+            Card: "1111222233334567",
+            Cvv: "432",
+            Expiry: "2026"
+        }
+
+        function VerifyCard(){
+            let card = document.getElementById("txtCard").value;
+            if(card === user.Card){
+                document.getElementById("txtCvv").disabled = false;
+            }
+        }
+        function VerifyCvv(){
+            let card = document.getElementById("txtCvv").value;
+            if(card === user.Cvv){
+                document.getElementById("lstExpiry").disabled = false;
+            }
+        }
+        function VerifyExpiry(){
+            let card = document.getElementById("lstExpiry").value;
+            if(card === user.Expiry){
+               document.querySelector("button").disabled=false;
+            }
+        }
+        function PayClick(){
+            confirm("Do you want to pay");
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Card Number</dt>
+        <dd><input type="text" id="txtCard" onblur="VerifyCard()"></dd>
+        <dt>CVV</dt>
+        <dd><input type="text" disabled id="txtCvv" onblur="VerifyCvv()" size="3"></dd>
+        <dt>Expiry</dt>
+        <dd>
+            <select id="lstExpiry" disabled onchange="VerifyExpiry()">
+                <option>2025</option>
+                <option>2026</option>
+                <option>2027</option>
+            </select>
+        </dd>
+    </dl>
+    <button disabled onclick="PayClick()">Pay</button>
+</body>
+</html>

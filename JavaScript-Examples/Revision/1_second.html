@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-second</title>
+    <script>
+        function bodyload(){
+            imgContainer.src = "../../public/images/kid.jpg";
+            btnLogin.value = "Login";
+            btnRegister.value = "Register";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img width="200" height="200" id="imgContainer">
+    </div>
+    <div>
+        <form id="frmLogin">
+            <h3>Register</h3>
+            User Name : <input type="text" > <input type="button" id="btnLogin"> 
+        </form>
+
+    </div>
+    <div>
+        <form id="frmRegister">
+            <h3>Login</h3>
+            Email : <input type="text"> OTP : <input type="text" size="3"> <input type="button" id="btnRegister">
+        </form>
+    </div>
+</body>
+</html>

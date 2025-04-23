@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+    <script type="text/javascript">
+        function bodyload(){
+            poster.src = "../../public/images/kid.jpg";
+            frmLogin.btnLogin.value = "Login";
+            frmRegister.btnRegister.value="Register";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img width="200" height="200" name="poster">
+    </div>
+    <div>
+        <form name="frmLogin">
+            <h3>Register</h3>
+            User Name : <input type="text"><input type="button" name="btnLogin">
+
+        </form>
+    </div>
+    <div>
+        <form name="frmRegister">
+            <h3>Login</h3>
+            Email : <input type="email">OTP: <input type="text" size="4"> <input type="button" name="btnRegister">
+        </form>
+    </div>
+</body>
+</html>

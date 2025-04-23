@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin</title>
+    <script>
+        function EnableText(){
+            document.getElementById("txtPin").disabled = false;
+            document.querySelector("p").innerHTML = "";
+            document.getElementById("txtPin").focus();
+        }
+
+        function SubmitClick(){
+            var pin = document.getElementById("txtPin").value;
+            if(pin === "3344"){
+                document.write("Success..");
+            }else{
+                document.getElementById("txtPin").disabled = true;
+                document.querySelector("p").innerHTML = "Textbox will be evabled in 10 sec..";
+                setTimeout(EnableText,10000);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txtPin"> <button onclick="SubmitClick()">Submit</button>
+    <p></p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>move Right and Left</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    
+    <script>
+        let x = 10;
+        function MoveRight(){
+            x*=2;
+            document.getElementById("pic").style.marginLeft = x + "px";
+        }
+        function MoveLeft(){
+            x/=2;
+            document.getElementById("pic").style.marginLeft = x + "px";
+        }
+    </script>
+</head>
+<body>
+    <button class="bi bi-chevron-left m-5" onclick="MoveLeft()"></button>
+    <button class="bi bi-chevron-right btn btn-danger" onclick="MoveRight()"></button>
+    <div class="m-5">
+        <img id="pic" src="../../public/images/kid.jpg" width="100" height="100">
+    </div>
+</body>
+</html>

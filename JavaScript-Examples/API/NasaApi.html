@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NasaApi</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function bodyload(){
+            fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY&quot;")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                  data.photos.map(function(photo){
+                        var div = document.createElement("div");
+                        div.className = "card m-2 p-2";
+                        div.style.width = "250px";
+                        div.innerHTML = `
+                           <a href=${photo.img_src} target="_blank"><img class="card-img-top" src=${photo.img_src} height="130"></a>
+                           <div class="card-header">
+                               <h4>${photo.id}</h4>
+                           </div>
+                           <div class="card-body">
+                               <dl>
+                                  <dt class="bi bi-camera"> Camera</dt>
+                                  <dd>${photo.camera.full_name}</dd>
+                                  <dt class="bi bi-rocket"> Rover </dt>
+                                  <dd>${photo.rover.name}</dd>
+                                </dl>
+                           </div>
+                        `;
+                        document.querySelector("section").appendChild(div);
+                  })
+            })
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <h2>Mars Rover Photos</h2>
+    <section class="d-flex flex-wrap">
+
+    </section>
+</body>
+</html>

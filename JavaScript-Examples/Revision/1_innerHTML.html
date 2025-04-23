@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML</title>
+    <script>
+        function DeleteClick(){
+            let result = confirm("Are you sure?\nWant to delete user?");
+            if(result == true){
+                document.querySelector("p").innerHTML="<h1 style='color:blue'>Successfully..</h1>";
+            }
+            else{
+                document.querySelector("p").innerHTML="<h1 style='color:red'>Canceled..</h1>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete user</button>
+    <p></p>
+</body>
+</html>

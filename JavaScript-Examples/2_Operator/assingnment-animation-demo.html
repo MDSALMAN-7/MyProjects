@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+            background-color: black;
+        } */
+        @keyframes Spin{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform:rotate(360deg);
+            }
+            
+        }
+        .fan-wings{
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 1px solid black;   
+        }
+        .fan-stand{
+            width: 50px;
+            height: 200px;
+            border: 1px solid black;
+            border-top: 0;
+            margin-top: -2px;
+        }
+        .fan{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
+        .fan-footer{
+            width: 150px;
+            height: 150px;
+            background-color: black;
+            border-radius: 50%;
+
+        }
+    </style>
+    <script>
+        function StartClick(){
+            var img = document.querySelector("img");
+            img.style.animationName = "Spin";
+            img.style.animationDuration = "500ms";
+            img.style.animationIterationCount = "infinite";
+            img.style.animationTimingFunction = "linear";
+        }
+        function MediumClick(){
+            var img = document.querySelector("img");
+            img.style.animationName = "Spin";
+            img.style.animationDuration = "300ms";
+            img.style.animationIterationCount = "infinite";
+            img.style.animationTimingFunction = "linear";
+        }
+        function HighSpeed(){
+            var img = document.querySelector("img");
+            img.style.animationName = "Spin";
+            img.style.animationDuration = "100ms";
+            img.style.animationIterationCount = "infinite";
+            img.style.animationTimingFunction = "linear";
+        }
+
+    </script>
+</head>
+<body >
+    <button onclick="StartClick()">1</button>
+    <button onclick="MediumClick()">2</button>
+    <button onclick="HighSpeed()">3</button>
+    <img src="../../public/images/fan.png">
+
+    <div class="fan">
+        <div class="fan-wings">
+
+        </div>
+        <div class="fan-stand">
+
+        </div>
+        <!-- <div class="fan-footer">
+
+        </div> -->
+    </div>
+</body>
+</html>

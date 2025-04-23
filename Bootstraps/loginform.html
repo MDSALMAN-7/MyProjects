@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <link rel="stylesheet" href="../Bootstraps/../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../Bootstraps/../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container-fluid shadow shadow-1 w-75 border rounded-4 d-flex mt-5 ">
+
+        <div class="left w-50 bg-info d-flex flex-column  justify-content-center align-items-center rounded-4 m-2  mb-3 mt-3">
+            <img class="w-50  rounded-4 " src="../public/images/login.png" alt="">
+            <div class="text-white mt-3 display-5 text-center">Continue to Explore</div>
+            <p class="text-white text-center">Login here and explore what we</p>
+            <p class="text-white">have for you</p>
+            
+        </div>
+
+        <div class="right w-50  m-2 p-3 mb-3 mt-3">
+            <h2 class="mt-3">Hello again,</h2>
+            <div class="mt-3">Welcome back!</div>
+            <input type="email"  placeholder="Email address" class="mt-5  form-control">
+            <input type="password"  placeholder="*******" class="mt-2  form-control">
+
+            <div class="mt-1 d-flex justify-content-between">
+                <span><input type="checkbox"  > Remember Me</span>
+                <a href="#" class="color-primary">Forgot Password?</a>
+            </div>
+            <button class="btn btn-primary w-100 p-1 mt-5">Login</button>
+            <button class="btn btn-light w-100 p-1 mt-3"><img src="../public/images/g.png"  width="32" class="fs-normal"> Sign in with Google</button>
+
+            <div class="mt-3 normal">Don't have account?<a href="#" class="color-primary" data-bs-target="#signup" data-bs-toggle="modal">Sign up</a></div>
+
+
+            <div class="modal fade w-25" id="signup">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-header">
+                        <h3>Sign up</h3>
+                        <div class="modal-body">
+                            <dl>
+                                <dd><input type="text" class="form-control" placeholder="First name"></dd>
+                                <dd><input type="text" placeholder="Last name"></dd>
+                                <dd><input type="email" placeholder="Email"></dd>
+                                <dd><input type="text" placeholder="Birth date"></dd>
+                                <dd><input type="text" placeholder="Phone number"></dd>
+                                <dd><input type="text" placeholder="Password"></dd>
+                                <dd><input type="text" placeholder=" Confirm password"></dd>
+                            </dl>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Sign Up</button>
+                            <div>
+                                <span>Already have an account?<a href="#">Log in</a></span>
+                            </div>
+                            <div><hr>or<hr></div>
+                            button class="btn btn-light  p-1 mt-3"><img src="../public/images/g.png"  width="32" class="fs-normal"> Sign in with Google</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <script>
+        var milliseconds = 0;
+        var seconds = 0;
+        var thread;
+
+        function Timer() {
+            milliseconds += 10; // Increment by 10 ms
+            
+            if (milliseconds > 1000) {
+                milliseconds = 0;
+                seconds++;
+            }
+
+            document.getElementById("milliSeconds").innerHTML = milliseconds + " ms";
+            document.getElementById("seconds").innerHTML = seconds + " s";
+        }
+
+        function StartClick() {
+            if (!thread) {
+                thread = setInterval(Timer, 10); // Update every 10 ms
+            }
+        }
+
+        function StopClick() {
+            clearInterval(thread);
+            thread = null; // Reset thread variable
+        }
+    </script>
+    <style>
+        .clock {
+            border: 1px solid gray;
+            padding: 20px;
+            width: 200px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+        <button onclick="StartClick()">Start</button>
+        <button onclick="StopClick()">Stop</button>
+        <div class="clock">
+            <div id="seconds">0 s</div>
+            <div id="milliSeconds">0 ms</div>
+        </div>
+    </div>
+</body>
+</html>

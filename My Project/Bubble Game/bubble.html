@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pr</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+        }
+        
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(199, 236, 199);
+            /* background-color: white; */
+        }
+        .panel{
+            width: 85%;
+            height: 80%;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .p-top{
+            height: 100px;
+            background-color: rgb(133, 209, 133);
+            
+        }
+
+        .box{
+            font-size: 22px;
+            padding: 8px 20px;
+        }
+        .p-bottom{
+            width: 100%;
+            height: calc(100%-100px);
+        }
+        .bubble{
+            height: 40px;
+            width: 40px;
+            background-color: rgb(133, 209, 133);
+        }
+    </style>
+    
+</head>
+<body class="container-fluid p-0 m-0  ">
+    <div class="main d-flex justify-content-center align-items-center ">
+        <div class="panel bg-white ">
+            <div class="p-top d-flex justify-content-center align-items-center  text-white">
+                <div class="element d-flex justify-content-center align-items-center">
+                    <h2 class="me-3">HIT</h2>
+                    <div class="box bg-white  rounded text-dark" id="hitvalue">0</div>
+                </div>
+                <div class="element d-flex justify-content-center align-items-center mx-5">
+                    <h2 class="me-3">Timer</h2>
+                    <div class="box bg-white rounded text-dark" id="timervalue">60</div>
+                </div>
+                <div class="element d-flex justify-content-center align-items-center">
+                    <h2 class="me-3">Score</h2>
+                    <div class="box bg-white text-dark rounded" id="scorevalue">0</div>
+                </div>
+                
+            </div>
+            <div class="p-bottom p-2 d-flex flex-wrap justify-content-center align-items-center">
+                
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        let timer = 10;
+        let randomNumber = 0;
+        let score = 0;
+
+        function makeBubble(){
+            let bubble="";
+            for(i=1; i<=150; i++){
+
+                bubble += `<div class="bubble rounded rounded-circle d-flex justify-content-center align-items-center m-1">${Math.floor(Math.random()*10)}</div>`;
+            }
+            document.querySelector(".p-bottom").innerHTML = bubble;
+        }
+
+        function timerBubble(){
+            let stopTimer = setInterval (function(){
+                if(timer>0){
+                    timer--;
+                    document.querySelector("#timervalue").textContent = timer;
+                }
+                else{
+                    clearInterval(stopTimer);
+                    document.querySelector("#hitvalue").innerHTML = 0;
+                    document.querySelector("#scorevalue").innerHTML = 0;
+                    document.querySelector(".p-bottom").innerHTML = `<div class='mt-5'>
+                                    <h1>Game over</h1>
+                                    <h2>Your scroe is ${score}</h2>
+                                </div>`;
+                }
+            },1000)
+        }
+
+        function hitGetNew(){
+            randomNumber = Math.floor(Math.random()*10);
+            document.querySelector("#hitvalue").textContent = randomNumber;
+        }
+
+        function increaseScore(){
+            score += 10;
+            document.querySelector("#scorevalue").textContent = score;
+        }
+
+        document.querySelector(".p-bottom").addEventListener('click',function(dets){
+            let clickNumber = Number(dets.target.textContent);
+            if(clickNumber === randomNumber){
+                increaseScore();
+                makeBubble();
+                hitGetNew();
+            }
+        })
+
+        makeBubble();
+        timerBubble();
+        hitGetNew();
+        
+    </script>
+    
+</body>
+</html>

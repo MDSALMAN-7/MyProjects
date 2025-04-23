@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output same page</title>
+    <script>
+        function DeleteClick(){
+            let result = confirm("Are you sure?\nWant to delete user?");
+            if(result == true){
+                document.write("<font siz='5' color='red' face='Arial'><b>User Deleted successfully..</b></font> <br><a href='output.html'>Back</a>")
+            }
+            else{
+                document.querySelector("p").innerText = "Canceled...";
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete User</button>
+    <p></p>
+</body>
+</html>
+

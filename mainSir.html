@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopper</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        *{
+            padding: 0;margin: 0;
+        }
+        .header-row-1 {
+            background-color: lightgray;
+            padding: 10px;
+            font-family: Arial;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .services {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 400px;
+        }
+        .header-row-1 span {
+            padding-left: 15px;
+           
+        }
+        .header-row-2 {
+            padding: 30px;
+            font-family: Arial;
+            display: flex;
+            justify-content: space-between;
+         
+        }
+        .brand-title {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        nav {
+            font-size: 18px;
+        }
+        nav span {
+            padding-right: 20px;
+        }
+        .shortcut-icons span {
+            padding-right: 10px;
+        }
+        article {
+            padding: 15px;
+            background-color: black;
+            color:white;
+            text-align: center;
+            font-family: Arial;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .bi-lightning-fill {
+            color: gold;
+        }
+        main {
+            height: 450px;
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            margin-top: 10px;
+         
+        }
+        .women-fashion {
+            background-image: url("./images/women-fashion.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            opacity: 0.7;
+        }
+        .men-fashion {
+            background-image: url("./images/men-fashion.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            opacity: 0.7;
+        }
+        .kids-fashion {
+            background-image: url("./images/kids-fashion.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            opacity: 0.7;
+        }
+        .btn-shop {
+            width: 130px;
+            background-color: white;
+            border:1px solid lightgray;
+            padding: 10px;
+            text-align: center;
+        }
+        .main-title {
+            font-family: Arial;
+            font-size: 40px;
+            font-weight: bold;
+            color:white;
+            text-shadow: 2px 2px 2px black;
+        }
+        .women-fashion:hover, .men-fashion:hover, .kids-fashion:hover {
+            opacity: 1;
+        }
+        .features {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            font-family: Arial;
+        }
+        .feature-row {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+        }
+        .feature-title {
+            font-weight: bold;
+        }
+        .latest-offers {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            text-align: center;
+            font-family: Arial;
+        }
+        .offer-title {
+            font-size: 50px;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .offer-subtitle {
+            font-size: 20px;
+            color:gray;
+        }
+        .best-collection {
+            height: 500px;
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+            grid-gap: 50px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        .women-collection {
+            background-image: url("./images/women-fashion.jpg");
+            background-size: cover;
+        }
+        .men-collection {
+            background-image: url("./images/men-fashion.jpg");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-row-1">
+            <div>
+                <span class="bi bi-truck"> FREE SHIPPING WORLDWIDE </span>
+                <span> <span class="bi bi-flag"> <span>United States<span class="bi bi-chevron-down"></span> </span>  </span>  </span>
+                <span> USD <span class="bi bi-chevron-down"></span> </span>
+                <span> English <span class="bi bi-chevron-down"></span> </span>
+            </div>
+            <div class="services">
+                <div>
+                    <span>Shipping</span>
+                    <span>FAQ</span>
+                    <span>Contact</span>
+                </div>
+                <div>
+                    <span class="bi bi-facebook"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-instagram"></span>
+                    <span class="bi bi-linkedin"></span>
+                </div>
+            </div>
+        </div>
+        <div class="header-row-2">
+            <div>
+                <span class="brand-title">Shopper.</span>
+            </div>
+            <div>
+                <nav>
+                    <span>Home</span>
+                    <span>Catalog</span>
+                    <span>Pages</span>
+                    <span>Docs</span>
+                    <span>Blog</span>
+                    <span>Shop</span>
+                </nav>
+            </div>
+            <div class="shortcut-icons">
+                <span class="bi bi-search"></span>
+                <span class="bi bi-person"></span>
+                <span class="bi bi-heart"></span>
+                <span class="bi bi-cart2"></span>
+            </div>
+        </div>
+    </header>
+    <section>
+        <article>
+            <span class="bi bi-lightning-fill"></span>
+            <span> HAPPY HOLIDAY DEAL ON EVERYTHING </span>
+            <span class="bi bi-lightning-fill"></span>
+        </article>
+        <main>
+            <div class="women-fashion">
+                <div class="main-title">Women</div>
+                <div class="btn-shop">
+                    Shop Women <span class="bi bi-arrow-right"></span>
+                </div>
+            </div>
+            <div class="men-fashion">
+                <div class="main-title">Men</div>
+                <div class="btn-shop">
+                    Shop Men <span class="bi bi-arrow-right"></span>
+                </div>
+            </div>
+            <div class="kids-fashion">
+                <div class="main-title">Kids</div>
+                <div class="btn-shop">
+                    Shop Kids <span class="bi bi-arrow-right"></span>
+                </div>
+            </div>
+        </main>
+        <div class="features">
+            <div class="feature-row">
+                <div>
+                    <span class="bi bi-truck"></span>
+                </div>
+                <div>
+                    <span class="feature-title">FREE SHIPPING</span> <br>
+                    <span>From all order above 500</span>
+                </div>
+            </div>
+            <div class="feature-row">
+                <div>
+                    <span class="bi bi-arrow-left-right"></span>
+                </div>
+                <div>
+                    <span class="feature-title">FREE SHIPPING</span> <br>
+                    <span>From all order above 500</span>
+                </div>
+            </div>
+            <div class="feature-row">
+                <div>
+                    <span class="bi bi-bag"></span>
+                </div>
+                <div>
+                    <span class="feature-title">FREE SHIPPING</span> <br>
+                    <span>From all order above 500</span>
+                </div>
+            </div>
+            <div class="feature-row">
+                <div>
+                    <span class="bi bi-tag"></span>
+                </div>
+                <div>
+                    <span class="feature-title">FREE SHIPPING</span> <br>
+                    <span>From all order above 500</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="latest-offers">
+            <div class="offer-subtitle">New Collection</div>
+            <div class="offer-title">Best Picks 2019</div>
+            <div class="offer-text">Appear, dry there darkness they're seas, dry waters thing fly midst.<br> Beast, above fly brought Very green.</div>
+        </div>
+
+        <div class="best-collection">
+            <div class="women-collection">
+               
+            </div>
+            <div class="men-collection">
+
+            </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>

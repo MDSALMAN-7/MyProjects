@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr prompt</title>
+    <script>
+        function SearchClick(){
+            result=prompt("Enter some details","");
+            if(result==""){
+                alert("Enter data");
+            }
+            else if(result==null)
+            {
+                alert("You cancled..");
+            }
+            else{
+                document.querySelector("p").innerHTML="Searching for "+result;
+            }
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <button onclick="SearchClick()">Search</button>
+    <p></p>
+</body>
+</html>

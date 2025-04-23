@@ -1,0 +1,13 @@
+{
+    "title": "Apple iPhone 16 (White, 128 GB)",
+    "price": 74900,
+    "emi": 12484,
+    "rating": {"rate":4.6, "ratings":1642, "reviews": 62},
+    "offers": [
+        "Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
+        "Bank Offer₹2000 off on Flipkart UPIT&C",
+        "Bank Offer₹2000 off on UPI TransactionsT&C",
+        "Special PriceGet extra ₹5000 off (price inclusive of cashback/coupon)T&C"
+    ],
+    "image": "../public/images/iphone.png"
+}

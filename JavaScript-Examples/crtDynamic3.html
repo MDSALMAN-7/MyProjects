@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+            let ol = document.createElement("ol");
+            ol.type = "A";
+
+            let item1 = document.createElement("li");
+            let item2 = document.createElement("li");
+
+            item1.innerHTML = "HTML";
+            item2.innerHTML = "CSS";
+
+            ol.appendChild(item1);
+            ol.appendChild(item2);
+
+            document.querySelector("body").appendChild(ol);
+            
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>3</title>
+     <script>
+          function bodyload(){
+               var ol = document.createElement("ol");
+               ol.type = "A";
+
+               var item1=  document.createElement("li");
+               var item2=  document.createElement("li");
+
+               item1.innerHTML = "HTML";
+               item2.innerHTML = "CSS";
+
+               ol.appendChild(item1);
+               ol.appendChild(item2);
+
+               document.querySelector("body").appendChild(ol);
+          }
+     </script>
+</head>
+<body onload="bodyload()">
+     
+</body>
+</html> -->

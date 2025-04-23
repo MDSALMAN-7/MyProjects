@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr Match</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function VerifyPassword(){
+            let password = document.getElementById("txtPassword").value;
+            let regExp = /(?=.*[A-Z])\w{8,15}/;
+
+            let lblPassword = document.getElementById("lblPassword");
+            let pwdBar = document.getElementById("pwdBar");
+
+            if(password.length == 0){
+                lblPassword.innerHTML = "Password Required".fontcolor("red");
+            }
+            else{
+                if(password.match(regExp)){
+                    lblPassword.innerHTML = "Strong Password";
+                    pwdBar.style.width= "100%";
+                    pwdBar.className = "progress-bar progress-bar-animated progress-bar-striped bg-success";
+                }
+                else{
+                    if(password.length<8){
+                        lblPassword.innerHTML="Poor Password";
+                        pwdBar.style.width = "20%";
+                        pwdBar.className="progress-bar progress-bar-animated progress-bar-striped bg-danger";
+                    }
+                    else{
+                        lblPassword.innerHTML = "Weak Password";
+                        pwdBar.style.width = "70%";
+                        pwdBar.className = "progress-bar progress-bar progress-bar-animated progress-bar-striped bg-warning";
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <dl class="w-50 mt-5 ms-5">
+        <dt>Password</dt>
+        <dd>
+            <input type="password" class="form-control" id="txtPassword" onkeyup="VerifyPassword()">
+        </dd>
+        <dd>
+            <div class="progress">
+                <div id="pwdBar">
+                    <span id="lblPassword"></span>
+                </div>
+            </div>
+        </dd>
+    </dl>
+</body>
+</html>

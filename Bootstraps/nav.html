@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h3>Product Details</h3>
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a href="#basic" data-bs-toggle="tab" class="nav-link active">Basic Details</a></li>
+        <li class="nav-item"><a href="#preview" data-bs-toggle="tab" class="nav-link">Preview</a></li>
+        <li class="nav-item"><a href="#features" data-bs-toggle="tab" class="nav-link">Features</a></li>
+        <li class="nav-item"><a href="#ratings" data-bs-toggle="tab" class="nav-link">Ratings</a></li>
+    </ul>
+    <div class="tab-content mt-4">
+        <div class="tab-pane active" id="basic">
+            <h3>iPhone 16 - Black 128 GB</h3>
+            <p class="fs-3"> &#8377; 65,999 </p>
+        </div>
+        <div class="tab-pane" id="preview">
+            <img src="../public/images/iphone.png" width="300" height="400">
+        </div>
+        <div class="tab-pane" id="features">
+            <ul class="list-unstyled">
+                <li class="bi bi-tag-fill text-success"> <span class="text-secondary"> Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C</span> </li>
+                <li class="bi my-2 bi-tag-fill text-success"><span class="text-secondary">Bank Offer₹4000 Off On ICICI Bank Credit Non EMI, Credit and Debit Card EMI TransactionsT&C</span></li>
+                <li class="bi bi-tag-fill text-success"> <span class="text-secondary">Bank Offer₹4000 Off On Kotak Bank Credit Card TransactionsT&C</span> </li>
+                <li class="bi my-2 bi-tag-fill text-success"> <span class="text-secondary">Special PriceGet extra ₹5000 off (price inclusive of cashback/coupon)T&C</span> </li>
+            </ul>
+        </div>
+        <div class="tab-pane" id="ratings">
+            <span class="badge text-white bg-success rounded p-1"> 4.5 <span class=" bi bi-star-fill"></span> </span>
+            <span class="fw-bold text-secondary"> 4,200 ratings & 1000 reviews </span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        function bodyload(){
+             var product = {title:"", price:0, emi:0, rating:{rate:0, ratings:0, reviews:0}, image:'', offers:[]};
+
+             var http = new XMLHttpRequest();
+             http.open("get", "./data/product.json", true);
+             http.send();
+
+             http.onreadystatechange = function(){
+
+                    if(http.readyState===4){
+
+                         product = JSON.parse(http.responseText);
+
+                         document.getElementById("lblTitle").textContent = product.title;
+                         document.getElementById("lblRatings").innerHTML = `<span class="badge bg-success text-white">${product.rating.rate} <span class="bi bi-star-fill"></span> </span> <span class="text-secondary fw-bold"> ${product.rating.ratings.toLocaleString()} ratings & ${product.rating.reviews} reviews </span> `;
+                         document.getElementById("lblEmi").innerHTML = `${product.emi.toLocaleString('en-in', {style: "currency", currency: 'INR'})} / Month`;
+                         document.getElementById("lblPrice").innerHTML = "&#8377;" + product.price.toLocaleString();
+                         document.getElementById("imgProduct").src = product.image;
+
+                         product.offers.map(function(offer){
+                              var li = document.createElement("li");
+                              li.innerHTML = `<span class="text-secondary">${offer}</span>`;
+                              li.className = "bi bi-tag-fill my-2 text-success";
+
+                              document.querySelector("ul").appendChild(li);
+                         })
+
+                    }
+
+             }
+
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <div class="row mt-4">
+        <div class="col-3">
+            <img id="imgProduct" width="100%">
+        </div>
+        <div class="col-9">
+            <div id="lblTitle" class="fs-4"></div>
+            <div id="lblRatings" class="my-2">
+
+            </div>
+            <div id="lblEmi" class="fs-5 fw-bold">
+
+            </div>
+            <div id="lblPrice" class="fs-2 fw-bold my-2">
+ 
+            </div>
+            <div>
+                <h5>Available Offers</h5>
+                <ul class="list-unstyled">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr 3</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function VerifyPassword(){
+            let password = document.getElementById("txtPwd").value;
+
+            let regExp = /(?=.*[A-Z])\w{4,15}/;
+
+            let lblPwd = document.getElementById("lblPwd");
+            let pwdBar = document.getElementById("pwdBar");
+
+            if(password.length == 0){
+                lblPwd.innerHTML = "Password Required".fontcolor("red");
+            }
+            else{
+                if(password.match(regExp)){
+                    lblPwd.innerHTML = "Strong Password";
+                    pwdBar.style.width="100%";
+                    pwdBar.className = "progress-bar progress-bar-animated progress-bar-striped bg-success";
+                }
+                else{
+                    if(password.length<4){
+                        lblPwd.innerHTML = "Min 4 Chars";
+                        pwdBar.style.width = "20%";
+                        pwdBar.className = "progress-bar progress-bar-animated progress-bar-striped bg-danger";
+                    }
+                    else{
+                        lblPwd.innerHTML = "Atlist 1 Capital Letter";
+                        pwdBar.style.width = "70%";
+                        pwdBar.className = "progress-bar progress-bar-animated progress-bar-striped bg-warning";
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <dl class="w-50 ms-4 mt-4">
+        <dt>Password</dt>
+        <dd>
+            <input type="password" id="txtPwd" onkeyup="VerifyPassword()" class="form-control">
+        </dd>
+        <dd>
+            <div class="progress">
+                <div id="pwdBar">
+                    <span id="lblPwd"></span>
+                </div>
+            </div>
+        </dd>
+    </dl>
+</body>
+</html>

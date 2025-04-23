@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script type="text/javascript">
+        function Level1(){
+            document.getElementById("lblMsg").innerHTML = `10% Volume Increased`;
+        }
+        function Level2(){
+            document.getElementById("lblMsg").innerHTML = `50% Volume Increased`;
+        }
+        function Level3(){
+            document.getElementById("lblMsg").innerHTML = `100% Volume Increased`;
+        }
+
+        let thread1,thread2,thread3;
+
+        function VolumeClick(){
+            thread1 = setTimeout(Level1,1000);
+            thread2 = setTimeout(Level2,3000);
+            thread3 = setTimeout(Level3,5000);    
+        }
+        
+        function CancleClick(){
+            clearTimeout(thread2);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="VolumeClick()" class="bi bi-volume-up m-5 fs-4" ></button>
+    <button onclick = "CancleClick()" class="bi bi-volume-mute">Cancel 50%</button>
+    <br><br>
+    <span id="lblMsg"></span>
+</body>
+</html>

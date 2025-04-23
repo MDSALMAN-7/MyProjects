@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <script type="text/javascript">
+        function bodyload(){
+            window.document.images[0].src="../public/images/kid.jpg";
+            window.document.forms[0].elements[1].value="Register";
+            window.document.forms[1].elements[2].value="Logged in";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img src="" alt="" width="200" height="200">
+    </div>
+    <div>
+        <form action="">
+            <h3>Register</h3>
+            User Name : <input type="text"> <input type="button">
+        </form>
+    </div>
+    <div>
+        <form action="">
+            <h3>Login</h3>
+            Email : <input type="email">OTP: <input type="text" size="4"><input type="button">
+        </form>
+    </div>
+</body>
+</html>

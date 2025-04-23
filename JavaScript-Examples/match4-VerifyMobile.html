@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Mobile</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+         var tip = "";
+         var regExp = / /;
+
+        function CountryChange(){
+            var country = document.getElementById("lstCountries").value;
+            var mobileTexBox = document.getElementById("txtMobile");
+            var imgFlag = document.getElementById("imgFlag");
+
+            if(country=="India"){
+                tip = "eg: +91 and 10 digits";
+                mobileTexBox.placeholder = tip;
+                regExp = /\+91\d{10}/;
+                imgFlag.src = "../public/images/india.png";
+
+            } else if(country=="US") {
+                tip = "eg: +(1)(425) 555-0100";
+                mobileTexBox.placeholder = tip;
+                regExp = /\+\(1\)\(\d{3}\)\s\d{3}-\d{4}/;
+                imgFlag.src = "../public/images/us.png";
+
+            } else if(country=="UK") {
+                tip = "eg: +(44)(20) 1234 5678";
+                mobileTexBox.placeholder = tip;
+                regExp = /\+\(44\)\(\d{2}\)\s\d{4}\s\d{4}/;
+                imgFlag.src = "../public/images/uk.png";
+            }
+
+        }
+        function VerifyMobileClick(){
+            var mobile = document.getElementById("txtMobile").value;
+            var lblMobile = document.getElementById("lblMobile");
+
+            if(mobile.match(regExp)){
+                lblMobile.innerHTML = "Mobile Verified".fontcolor('green');  
+            } else {
+                lblMobile.innerHTML = `Invalid Mobile : ${tip}`.fontcolor('red');
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <h3>Your Mobile Verification</h3>
+    <dl class="w-25">
+        <dt>Select Your Country</dt>
+        <dd class="input-group">
+            <select id="lstCountries" onchange="CountryChange()" class="form-select">
+                <option>Select Country</option>
+                <option>India</option>
+                <option>US</option>
+                <option>UK</option>
+            </select>
+            <img id="imgFlag" class="input-group-text" width="50">
+        </dd>
+        <dt>Mobile Number</dt>
+        <dd><input type="text" id="txtMobile" class="form-control"></dd>
+        <dd id="lblMobile"></dd>
+        <dd>
+            <button onclick="VerifyMobileClick()" class="btn btn-warning w-100">Verify Mobile</button>
+        </dd>
+    </dl>
+</body>
+</html>
